@@ -1,0 +1,78 @@
+---
+  head:
+    default:
+      title: Default title
+      mobile: false
+      meta:
+        author: Murat Khatypov
+        description: Put value here
+        keywords: Put value here
+      og:
+        url: https://
+        description: Description
+        image:
+          path: assets/images/content/preview.png
+          type: image/png
+          width: 500
+          height: 300
+
+    index:
+      title: Список
+      mobile: false
+      meta: default
+      og: default
+
+    home:
+      title: Home
+      mobile: false
+      meta: default
+      og: default
+
+    investments:
+      title: Investments
+      mobile: false
+      meta: default
+      og: default
+
+    about:
+      title: About
+      mobile: false
+      meta: default
+      og: default
+
+    security:
+      title: Security
+      mobile: false
+      meta: default
+      og: default
+
+    partnership:
+      title: Partnership
+      mobile: false
+      meta: default
+      og: default
+
+    faq:
+      title: Faq
+      mobile: false
+      meta: default
+      og: default
+
+    support:
+      title: Support
+      mobile: false
+      meta: default
+      og: default
+
+    registration:
+      title: Registration
+      mobile: false
+      meta: default
+      og: default
+
+    cabinet:
+      title: Cabinet
+      mobile: false
+      meta: default
+      og: default
+

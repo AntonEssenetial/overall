@@ -1,0 +1,68 @@
+include ../modules/injected/injected
+include ../modules/page/page
+
+include ../modules/head/head
+include ../modules/header/header
+include ../modules/footer/footer
+include ../modules/select/select
+
+
+doctype html
+html(lang=config.lang)
+
+  head
+    +head(head.home)
+
+  +page()
+    +inject('header')
+      +header()
+
+    .container
+      .col__40
+        <br>
+        button.button button 1 
+        <br><br>
+        button.button.button_lg button big 
+        <br><br>
+        button.button.button_md button medium 
+        <br><br>
+        button.button.button_tr button tranpsparent 
+        <br><br>
+        button.button(disabled) Button disabled 
+        <br><br>
+        button.button.button_loader
+        <br><br>
+    
+        a(href="") link example
+        h1 h1 heading
+    
+        label().form__label
+          input(type="text").form__input 
+        label().form__label
+          input(type="text" disabled value='Disabled').form__input 
+        label().form__label
+          input(type="text" readonly value='Read only').form__input 
+        label().form__label
+          input(type="text" value='Error').form__input.input_error
+        label().form__label
+          input(type="text" value='Success').form__input.input_success
+        label().form__label
+          +select('custom')
+            option('new') Select
+        label().label__checkbox
+          input(type="checkbox").input__checkbox
+          i
+          | Checkbox
+        label().label__radio
+          input(type="radio").input__radio
+          i
+          | Radio
+        label().label__switch
+          input(type="checkbox").input__switch
+          i
+          | Switch
+        label().form__label
+          textarea.form__area
+
+    +inject('footer')
+      +footer()

@@ -1,0 +1,66 @@
+.select
+   
+  &_custom
+    background: white
+    font-size 13px
+    bold()
+    display: block;
+    height: 47px;
+    text-transform: uppercase
+    color #656d78
+  
+  &_custom.opened
+  &_custom:hover
+    color #434a54
+    .jq-selectbox__select
+      border-color #7c848e
+      trs()
+    // .jq-selectbox__trigger
+    //   trs()
+    //   background: image-url('select-active.png') no-repeat center
+
+  .jq-selectbox__trigger
+    width 46px
+    box-shadow: -12px 0 9px rgb(255, 255, 255);
+    //background: image-url('select.png') no-repeat center
+
+  .jq-selectbox__dropdown
+    box-shadow: 0px 0px 3px rgba(0,0,0, 0.2);
+    background: #7c848e
+    width 100% !important
+    
+  .jq-selectbox__select-text
+    height 47px 
+    line-height @height
+    padding-left: 25px;
+    
+  .jq-selectbox__trigger
+    border-left: 1px solid #d1d1d1
+    
+  .jq-selectbox__dropdown li
+    height 47px
+    line-height @height
+    color white
+    white-space nowrap
+    padding 0 25px
+    &:hover
+      background: #6b737c
+      
+  .jq-selectbox__dropdown li.selected
+    background: #6b737c
+    color white
+  
+  .jq-selectbox.disabled
+    background: #f9f8f6;
+    border-color #d1d1d1;
+    color: #9f9f9f;
+    cursor: default;
+  
+  .jq-selectbox__select
+    border 1px solid #d1d2db;
+    overflow hidden
+    trs()
+    
+  .jq-selectbox.focused .jq-selectbox__select
+    border-color $dark-aqua
+    trs()

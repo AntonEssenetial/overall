@@ -1215,7 +1215,7 @@
   animation-name: bounceOutUp;
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fade {
   from {
     opacity: 0;
   }
@@ -1225,7 +1225,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fade {
   from {
     opacity: 0;
   }
@@ -1235,9 +1235,9 @@
   }
 }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+.fade {
+  -webkit-animation-name: fade;
+  animation-name: fade;
 }
 
 @-webkit-keyframes fadeInDown {
@@ -1441,8 +1441,8 @@
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
   }
 
   to {
@@ -1455,8 +1455,8 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
   }
 
   to {

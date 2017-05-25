@@ -1,6 +1,6 @@
 ---
   config:
-    projectName: Ellington
+    projectName: Overall
     lang: en
     path:
       favicons: assets/favicons

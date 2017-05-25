@@ -1,8 +1,8 @@
 // Import plugins
-animate-css(false)
+animate-css(true)
 bxslider(false)
-slick(false)
-customScrollbar(false)
+slick(true)
+customScrollbar(true)
 simpleLightBox(false)
 formstyler(false)
 remodal(false)
@@ -17,7 +17,7 @@ bannerLink(false)
 charts(false)
 pagination(false)
 FAQcontainer(false)
-customScrolCss(false)
+customScrolCss(true)
 readCrumbs(false)
 responsiveMenu(false)
 responsiveIframe(false)
@@ -30,44 +30,47 @@ $IMG-PATH = '../images/background/'
 
 // And the font-url
 $FONT-PATH = '../fonts/'
-font-face('opensans-bold-webfont', 'opensans-bold-webfont', 'normal', 'normal')
-font-face('opensans-regular-webfont', 'opensans-regular-webfont', 'normal', 'normal')
-font-face('opensans-light-webfont', 'opensans-light-webfont', 'normal', 'normal')
-font-face('opensans-semibold-webfont', 'opensans-semibold-webfont', 'normal', 'normal')
+font-face('GiorgioSans-Regular-Web', 'GiorgioSans-Regular-Web', 'normal', 'normal')
+font-face('GiorgioSans-Bold-Web', 'GiorgioSans-Bold-Web', 'normal', 'normal')
+font-face('pfdintextpro-bold-webfont', 'pfdintextpro-bold-webfont', 'normal', 'normal')
+font-face('pfdintextpro-light-webfont', 'pfdintextpro-light-webfont', 'normal', 'normal')
+font-face('pfdintextpro-medium-webfont', 'pfdintextpro-medium-webfont', 'normal', 'normal')
 bold()
-  font-family 'opensans-bold-webfont'
-regular()
-  font-family 'opensans-regular-webfont'
+  font-family 'pfdintextpro-bold-webfont'
+g-regular()
+  font-family 'GiorgioSans-Regular-Web'
+g-bold()
+  font-family 'GiorgioSans-Bold-Web'
 light()
-  font-family 'opensans-light-webfont'
-semi()
-  font-family 'opensans-semibold-webfont'
+  font-family 'pfdintextpro-light-webfont'
+med()
+  font-family 'pfdintextpro-medium-webfont'
   
 // Bdoy font 
-$body-font       = 'opensans-regular-webfont'
-$body-min-width  = 1240px 
+$body-font       = 'pfdintextpro-light-webfont'
+$body-min-width  = 320px
 $body-max-width  = 1920px
-$placeholderFont = 'opensans-regular-webfont';
+$placeholderFont = 'pfdintextpro-light-webfont';
 
 
 // Container-width 
-$container-width   = 1240px
-$container-padding = 0 20px
+$container-width   = 1160px
+$container-padding = 0 0px
 
 
 // Link - var
 $link-size                  = 14px
 $link-color                 = $text
-$link-hover-color           = $blue
+$link-hover-color           = black
 $link-text-docoration       = none
-$link-text-docoration-hover = underline
+$link-text-docoration-hover = none
 
 
 // Text - var
-$text-size        = 14px
+$text-size        = 16px
 $text-color       = $text
 $text-padding     = 18px
-$text-line-height = 23px
+$text-line-height = 24px
 
 
 // Span - var
@@ -76,7 +79,7 @@ $span-color = $text
 
 
 // Heading - var
-$h1      = 44px
+$h1      = 60px
 $h2      = 24px
 $h3      = 20px
 $h4      = 18px
@@ -157,8 +160,9 @@ $button-md-padding     = 0px
 
 // Native - Colors
 $brown         =  #e0914c
-$dark          =  #3d3d3d
-$yellow        =  #f5aa00
+$dark          =  #191919
+$dark2         =  #2b2b2b
+$yellow        =  #fbae11
 $blue          =  #0052b4
 $aqua          =  #61dfdd
 $dark-aqua     =  #025958
@@ -728,6 +732,7 @@ h1, h2, h3, h4, h5, h6
   font-size 16px
   line-height 23px   
 p
+  letter-spacing 1px
   font-size $text-size
   color $text-color  
   padding-bottom $text-padding
@@ -754,17 +759,22 @@ th
 
 
 // Custom scrollbar
-customScrolCss(customScrolCss = false)
-  if customScrolCss
-    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
-    .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
-      background: $soft-aqua
-    .mCSB_scrollTools .mCSB_draggerRail
-      background-color: border;
-    .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar
-    .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar
-      background-color: #fff; 
-      background-color: hover;
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
+  background: $yellow
+  width 10px 
+  border-radius 0px
+.mCSB_scrollTools .mCSB_draggerRail
+  background-color: black;
+  width 10px
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar
+  background-color: #fff; 
+  background-color: hover;
+.mCSB_scrollTools .mCSB_draggerRail
+  border-radius 0px
+.mCSB_scrollTools
+  width 10px
   
 
 // FAQ container

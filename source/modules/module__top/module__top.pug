@@ -1,0 +1,11 @@
+include ../module__top-slider/module__top-slider
+include ../module__scroll-down/module__scroll-down
+
+mixin module__top(data)
+  - var bemClass = 'module__top'
+  .module__top&attributes(attributes).jsHeight
+
+    +module__top-slider()
+
+    +module__scroll-down()
+    

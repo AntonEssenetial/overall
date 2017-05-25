@@ -48,15 +48,17 @@
 //= require svg4everybody/dist/svg4everybody.js
 
 
-//////////////////////////////////////////////////////////////////////////////
-// Optionals plugins
-//////////////////////////////////////////////////////////////////////////////
-
-// Tabs
-// ---------------------------------------------------------------------------
-//= require tabs/tabs.js
+// SVG4Everybody
+//= require reveal/scrollreveal.min.js
 
 
-// From styler
-// ---------------------------------------------------------------------------
-//= require formstyler/jquery.formstyler.min.js
+// Slick
+//= require slick/slick.min.js
+
+
+// Bx slider
+//= require bxSlider/jquery.bxslider.min.js
+
+
+// Scorllbar
+//= require scrollbar/jquery.mCustomScrollbar.min.js

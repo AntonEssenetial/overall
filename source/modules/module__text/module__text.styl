@@ -1,0 +1,53 @@
+.module__text
+  position: relative
+  
+  &__str 
+    font-size 150px 
+    g-bold()
+    color #2b2b2b
+    text-transform: uppercase
+    letter-spacing 40px
+    text-align: center
+    display: block
+    width 100%
+    position: absolute
+    top -25px
+    opacity: 0
+    
+  &__str-2
+    color $yellow
+    font-size 16px
+    text-transform: uppercase
+    g-bold()
+    letter-spacing 5px
+    display: block
+    margin 0 0 23px 0
+    
+  &__str-3
+    color white 
+    g-bold()
+    text-transform: uppercase
+    font-size 30px
+    letter-spacing 10px
+    display: block
+    +after('')
+      width 30px 
+      height 2px 
+      background-color $yellow
+      display: block
+      margin 25px 0 24px 0
+    
+  p 
+    color white
+    opacity 0
+    
+  &__col 
+    width 570px
+    margin 0 auto
+    position: relative
+    
+.jsText.custom
+  .module__text__str
+    textFade()
+  p
+    textFade2()

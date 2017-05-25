@@ -1,4 +1,11 @@
+include ../icon/icon
+
 mixin module__logo(data)
   - var bemClass = 'module__logo'
   .module__logo&attributes(attributes)
-    
+    a(class=bemClass + '__link')
+      +svg({
+        name: 'logo',
+        width: 100,
+        height: 50
+      })

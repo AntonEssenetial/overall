@@ -1,0 +1,6 @@
+mixin module__share(data)
+  - var bemClass = 'module__share'
+  .module__share&attributes(attributes)
+    div(class=bemClass + '__btn') 
+      span(class=bemClass + '__str').jsShare Share 
+      +icon('plus')

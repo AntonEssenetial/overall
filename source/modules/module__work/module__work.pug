@@ -1,0 +1,18 @@
+include ../module__text/module__text
+
+mixin module__work(data)
+  - var bemClass = 'module__work'
+  .module__work&attributes(attributes)
+    .container.f-dash__container
+      +module__text()
+      div(class=bemClass + '__row').row.wrap.f__row  
+        -for(var x = 0 ; x < 9 ; x ++)
+          .f__col.jsShow
+            div(class=bemClass + '__item')
+              a(href='single-page.html' class=bemClass + '__link') 
+                img(src='assets/images/work/1.jpg' alt='hbo animals' class=bemClass + '__img')
+                div(class=bemClass + '__title') 
+                  span(class=bemClass + '__str') Hbo animals
+      .row.center-c
+        a(href='').btn-link More work
+

@@ -1,0 +1,31 @@
+.module__share
+  position: fixed
+  left 0px
+  bottom 0px
+  z-index 1
+  animation1()
+  
+  .icon_plus 
+    color white
+    width 10px 
+    height @width
+    
+  &__str 
+    font-size 16px
+    text-transform: uppercase 
+    g-bold()
+    color white
+    letter-spacing 5px
+    
+  &__btn 
+    transform: rotate(-90deg);
+    position: relative
+    top -90px
+    left 1px
+    cursor pointer
+    
+  &__btn:hover &__str
+    color $yellow
+    
+  &__btn:hover .icon_plus 
+    color $yellow

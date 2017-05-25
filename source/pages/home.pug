@@ -6,6 +6,7 @@ include ../modules/header/header
 include ../modules/footer/footer
 
 include ../modules/heading/heading
+include ../modules/page__main/page__main
 
 - var pageId = 0;
 
@@ -19,7 +20,8 @@ html(lang=config.lang)
     +inject('header')
       +header()
 
-    a(href="") new tht th th
+    +inject('page__main')
+      +page__main()
 
     +inject('footer')
       +footer()

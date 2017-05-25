@@ -1,4 +1,19 @@
+include ../module__logo/module__logo
+include ../sandwitch/sandwitch
+include ../main-menu/main-menu
+
 mixin header(data)
   - var bemClass = 'header'
   .header&attributes(attributes)
+    .container
+      .row.between
+        
+        +module__logo()
+
+        +sandwitch()
+        
+        .module__main-menu
+          +main-menu(mainMenu.default)
+
+
     

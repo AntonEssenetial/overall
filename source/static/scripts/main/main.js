@@ -1,6 +1,6 @@
 'use strict';
 
-// svg4everybody();
+svg4everybody();
 
 $(function() {
     FastClick.attach(document.body);

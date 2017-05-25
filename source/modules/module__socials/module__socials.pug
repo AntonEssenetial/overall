@@ -1,4 +1,14 @@
 mixin module__socials(data)
   - var bemClass = 'module__socials'
   .module__socials&attributes(attributes)
-    
+    div(class=bemClass + '__row').row.wrap
+      a(href="#" class=bemClass + '__icon') 
+        +icon('flickr')
+      a(href="#" class=bemClass + '__icon') 
+        +icon('facebook')
+      a(href="#" class=bemClass + '__icon') 
+        +icon('twitter')
+      a(href="#" class=bemClass + '__icon') 
+        +icon('instagram')
+      a(href="#" class=bemClass + '__icon') 
+        +icon('vimeo')

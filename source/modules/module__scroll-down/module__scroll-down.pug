@@ -1,0 +1,8 @@
+include ../icon/icon
+
+mixin module__scroll-down(data)
+  - var bemClass = 'module__scroll-down'
+  .module__scroll-down&attributes(attributes)
+    span(class=bemClass + '__str').jsScroll Scroll down
+    +icon('down')
+    

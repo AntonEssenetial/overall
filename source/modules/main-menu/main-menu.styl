@@ -1,2 +1,67 @@
+.module__main-menu
+  position: fixed
+  background: white
+  width 100%
+  height 100%
+  left 0px 
+  top 0px
+  z-index: 2
+  transform: translateY(-100%);
+  display flex
+  trs-slow()
+  
 .main-menu
-  //
+  text-align: center
+  margin auto
+  
+  &__item 
+    margin 35px 0
+    opacity 0
+  
+  &__link 
+    g-bold()
+    color black
+    font-size 40px 
+    text-transform: uppercase
+    letter-spacing 10px
+    position: relative
+    overflow: hidden
+    padding 0 10px 0 20px 
+    +before('')
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $yellow
+      position: absolute;
+      top: 50%;
+      transform: translateX(-116%);
+      z-index: 1;
+
+.module__main-menu.active  
+  .main-menu__item
+    animation: mainMenuItem 0.5s ease-out;
+    animation-fill-mode: forwards;    
+  .main-menu__item:nth-child(1)
+    animation-delay: .2s
+  .main-menu__item:nth-child(2)
+    animation-delay: .4s
+  .main-menu__item:nth-child(3)
+    animation-delay: .6s
+  .main-menu__item:nth-child(4)
+    animation-delay: .8s
+  .main-menu__item:nth-child(5)
+    animation-delay: 1s
+         
+.is-active::before 
+  transform: translateX(116%);
+  transition: ease-in-out .6s;
+  
+@keyframes mainMenuItem
+  0%
+    opacity 0
+    transform translateY(-40px)
+  100%
+    opacity 1
+    transform translateY(0px)
+    
+

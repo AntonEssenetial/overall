@@ -1,5 +1,30 @@
 include ../footer-nav/footer-nav
+include ../module__socials/module__socials
+include ../module__share/module__share
+include ../module__insta/module__insta
+include ../module__subscribe/module__subscribe
 
 mixin footer(data)
   - var bemClass = 'footer'
   footer.footer&attributes(attributes)
+  
+    +module__insta()
+    
+    .container
+      div(class=bemClass + '__row').row.between
+        div(class=bemClass + '__col')
+          span(class=bemClass + '__str') About
+          p Overall Murals, Inc. is a registered <br> fully-insured Outdoor Advertising Company <br> specializing inlarge-scale, hand-painted <br> murals.Based in Brooklyn since 2010.
+        div(class=bemClass + '__col')
+          span(class=bemClass + '__str') Twitter
+          p Check out our WallChimps. See full <br> video here: https://t.co/4rb3ii9dLA <br> @MailChimp @MailChimp Design <br> #handpaint #mural
+        div(class=bemClass + '__col')
+          span(class=bemClass + '__str') Contact
+          p 874 Kent Ave. #1 Brooklyn, NY 11205
+          p P. 718.783.0835 <br> F. 718.783.0760
+  
+      .row.center
+        +module__socials()
+        +module__subscribe()
+
+  +module__share()

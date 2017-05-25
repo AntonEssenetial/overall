@@ -1,0 +1,149 @@
+.module__insta
+  padding 100px 0 66px 0
+  background: $dark
+  border-bottom 1px solid $dark2
+  
+  &__str 
+    font-size 150px
+    color $dark2
+    g-bold()
+    text-transform: uppercase
+    text-align: center
+    width 100%
+    display: block
+    letter-spacing 40px
+    position: absolute
+    top -25px
+    left 0px
+    
+  &__str-2 
+    display: block 
+    text-align: center
+    margin 0 auto
+    color white
+    g-bold()
+    font-size 40px
+    text-transform: uppercase
+    letter-spacing 10px
+    position: relative
+    top 32px
+    
+  &__row 
+    margin 168px auto 0 auto
+    width 1160px 
+    
+  .slider-link 
+    text-align: center
+    width 100% 
+    height 100%
+    position: absolute 
+    left 0px 
+    top 0px
+    overflow hidden
+    
+  .slider-title
+    font-size 16px 
+    color white 
+    g-bold() 
+    text-transform: uppercase
+    letter-spacing 10px 
+    z-index 1
+    absolute-center(68px, 30px)
+    opacity 0 
+    trs()
+    
+  .img
+    width 0px
+    height 290px
+    background-size cover
+    background-repeat no-repeat
+    position relative
+    display: block
+    
+    +after('')
+      position: absolute
+      width 100% 
+      height 100%
+      background: #191919
+      opacity 0
+      left 0px 
+      top 0px
+      trs()
+    
+    &:hover:after 
+      opacity 0.8
+      trs()
+      
+    &:hover span 
+      trs()
+      opacity 1
+    
+  img 
+    display: block
+    width 290px 
+    height @width
+
+  .img
+    width 100%
+      
+  .slide 
+    display flex
+    opacity 1 !important
+    z-index 0 !important
+
+  .slide.slick-current
+    z-index: 4 !important
+    opacity 1 !important
+    .slider-link
+      animation slickWidth .3s ease-out
+      animation-fill-mode: forwards;
+    .slide-wrapper:nth-child(2) .img
+      animation slickWidth .5s ease-out
+    .slide-wrapper:nth-child(3) .img
+      animation slickWidth .7s ease-out
+    .slide-wrapper:nth-child(4) .img
+      animation slickWidth .9s ease-out
+      
+  .slide.baluba 
+    z-index 1 !important
+  
+  .slide-wrapper
+    width 25%
+    
+  .slide-btn 
+    width 15px 
+    height 5px 
+    background: white
+    cursor pointer
+    overflow hidden 
+    position: relative
+    margin 0 30px
+    +after('')
+      width 100% 
+      height 100% 
+      display: block
+      background: $yellow
+      transform translateX(-15px)
+      trs-slow()
+    &:hover:after 
+      transform translateX(0px)
+      trs-slow()
+      
+  .slick-active .slide-btn:after
+    transform translateX(0px)
+
+  .slick-dots
+    display flex
+    width auto 
+    margin 60px auto 0 auto
+    justify-content center
+    
+
+@keyframes slickWidth
+  0% 
+    width 0%
+    opacity 0
+  100% 
+    width 100%
+    opacity 1
+    

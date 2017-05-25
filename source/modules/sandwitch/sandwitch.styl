@@ -1,3 +1,21 @@
+.str-1
+.str-2
+  color white
+  g-bold()
+  text-transform: uppercase
+  font-size 16px
+  letter-spacing 6px
+  
+.str-2 
+  display: none
+
+.toggle-menu.active
+  .str-2 
+    display: block
+    color black 
+    trs()
+  .str-1 
+    display: none
 .header__responsive-menu.active
 .menu.active
   display block
@@ -5,51 +23,50 @@
   background: none
   border none
   outline none
-  display none
-  height 40px
   position relative 
   padding 0px
-  margin 0px
+  cursor pointer
+  top 6px
+  &:hover 
+    .sw-topper
+      top 5px
+    .sw-footer
+      top 1px
+  
+      
 .sandwitch
-  width 31px
-  height 21px
-  left 0
-  right 0
-  margin auto
-  z-index 200
+  height 12px
+  margin-left 20px
   > span
-    width 31px
-    height 4px
-    background black
+    width 30px
+    height 2px
+    background white
     border none
     border-radius 0px
     display block
     position relative
 .sw-topper
-  top 5px
+  top 0px
   transition: transform 0.5s, top 0.2s
   display block 
 .sw-bottom 
-  top: 10px
+  top: 3px
   transition: transform 0.5s, top 0.2s
-  transition-delay: 0.2s, 0s 
 .sw-footer 
-  top: 15px
-  transition: all 0.5s
-  transition-delay: 0.1s 
+  top: 6px
+  transition: transform 0.5s, top 0.2s
 .toggle-menu.active .sw-topper 
 .button__sub.active .sw-topper 
-  background $brown
-  top: 13px
-  transform: rotate(-45deg) 
+  background black
+  top: 5px
+  transform: rotate(315deg) 
 .toggle-menu.active .sw-bottom 
 .button__sub.active .sw-bottom 
-  background $brown
-  top: 10px
-  transform: rotate(45deg) 
+  background black
+  transform: rotate(225deg) 
 .toggle-menu.active .sw-footer 
 .button__sub.active .sw-footer 
-  background $brown
+  background black
   opacity: 0
   top: 0
-  transform: rotate(180deg)
+  transform: rotate(60deg)

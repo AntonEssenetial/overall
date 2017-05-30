@@ -4,6 +4,9 @@
   bottom 0px
   z-index 1
   animation1()
+  mix-blend-mode: difference;
+  &:hover 
+    mix-blend-mode: inherit;
   
   .icon_plus 
     color white
@@ -29,3 +32,116 @@
     
   &__btn:hover .icon_plus 
     color $yellow
+    
+  &__popup 
+    .icon 
+      width 30px 
+      height 30px
+      margin auto
+      fill white
+      margin auto
+      position relative
+      z-index: 1
+      opacity 0
+    
+  &__link 
+    width 170px 
+    height @width
+    display: flex
+    margin 0 30px 30px 0
+    position: relative
+    overflow: hidden
+    &:nth-child(4)
+    &:nth-child(8)
+      margin-right 0px
+    +after('')
+      width 100%
+      height 100%
+      display: block
+      position: absolute
+      trs()
+      left 0px
+      background: white
+      transform translateY(100%)
+    +before('')
+      background $dark2
+      width 100%
+      height 100%
+      display: block
+      position: absolute
+      trs()
+      left 0px
+      background: $dark2
+      transform translateY(100%)
+    &:hover:after 
+      transform translateY(0%)
+      trs()
+    &:hover .icon 
+      fill $dark
+      trs()
+    
+  &__popup 
+    position fixed 
+    top 0px
+    width 100%
+    min-height 100vh
+    z-index 10
+    background: $dark
+    transform translateY(100%)
+    trs-slow()
+    display: flex
+    
+  &__popup.jsActive 
+    transform translateY(0%)
+    trs-slow()
+    
+  &__popup.jsActive .icon_close
+    animation .3s rotate .5s ease-out 
+    animation-fill-mode forwards
+    opacity 0.6
+    &:hover 
+      opacity: 1
+      trs()
+    
+  &__popup.jsActive 
+    for i in 1..10 
+      .module__share__link:nth-child({i}):before
+        animation (i * 300)ms share (i + 300)ms ease-out
+        animation-fill-mode: forwards;
+      .module__share__link:nth-child({i}) .icon
+        animation (i * 300)ms fade (i + 300)ms ease-out
+        animation-fill-mode: forwards;
+        
+    
+  &__icons
+    margin auto
+    width 770px
+    
+  &__close 
+    position: absolute 
+    right 30px 
+    top @right
+    .icon
+      cursor pointer 
+      opacity 0
+      trs()
+        
+
+.page_share 
+  overflow: hidden
+  
+.loaded
+  .module__share
+    animation1()
+  
+@keyframes rotate 
+  0%
+    transform rotateZ(90deg)
+  100%
+    transform rotateZ(0deg)
+    
+@keyframes share 
+  0%
+    transform translateY(100%)
+  100% 
+    transform translateY(0%)

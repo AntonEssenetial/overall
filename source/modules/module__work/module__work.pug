@@ -2,7 +2,7 @@ include ../module__text/module__text
 
 mixin module__work(data)
   - var bemClass = 'module__work'
-  .module__work&attributes(attributes)
+  #work.module__work&attributes(attributes)
     .container.f-dash__container
       +module__text()
       div(class=bemClass + '__row').row.wrap.f__row  
@@ -15,4 +15,5 @@ mixin module__work(data)
                   span(class=bemClass + '__str') Hbo animals
       .row.center-c
         a(href='').btn-link More work
+          span
 

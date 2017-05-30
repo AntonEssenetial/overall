@@ -1,7 +1,27 @@
 .header
-  position: absolute
+  position: fixed
+  top 0px 
+  left 0px
   z-index: 2
   width 100%
   padding-top 61px
+  trs-slow()
   
-  animation1()
+.trUp
+  transform: translateY(-105px)
+  trs-slow()
+
+.trDown
+  transform: translateY(0px)
+  background-color: white
+  padding-top 20px
+  trs-slow()
+  
+  span 
+    color black
+  .sandwitch > span
+    background: black
+    
+.loaded 
+  .header 
+    animation1()

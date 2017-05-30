@@ -4,11 +4,12 @@
     // Top section height detection
     var jsHeight = $('.jsHeight');
     function topHeight(){
-        if ($(window).width() <= 767) {
-            jsHeight.css('height', 'auto');
-        } else {
-            jsHeight.css('height', $(window).height());
-        }
+        jsHeight.css('height', $(window).height());
+        // if ($(window).width() <= 767) {
+        //     jsHeight.css('height', 'auto');
+        // } else {
+        //     jsHeight.css('height', $(window).height());
+        // }
     }
 
 

@@ -19,10 +19,6 @@
       position absolute
       left 0px 
       top 0px
-    
-    &:first-child
-      .module__top-slider__title
-        animation2()
       
   &__title 
     position: relative
@@ -50,7 +46,6 @@
     right 55px
     top 38%
     z-index 1
-    animation1()
     
     li 
       display flex 
@@ -137,3 +132,14 @@
          
   .slick-active &__str 
     display: block
+    
+
+.loaded
+  .slick-dots
+    animation1()
+  .module__top-slider
+    .slide
+      &:first-child
+        .module__top-slider__title
+          animation2()
+  

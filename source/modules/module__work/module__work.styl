@@ -71,11 +71,15 @@
     margin-bottom 35px
     
 .jsShow 
-  transform translateY(80px)
   opacity 0 
-  transition ease-in-out 1s
   
 .jsShow.custom 
-  transform translateY(0px)
-  opacity 1
-  transition ease-in-out 1s
+  &:nth-child(3n+1)
+    animation fadeUp .3s ease-out
+    animation-fill-mode: forwards;
+  &:nth-child(3n+2)
+    animation fadeUp .6s ease-out
+    animation-fill-mode: forwards;
+  &:nth-child(3n+3)
+    animation fadeUp .9s ease-out
+    animation-fill-mode: forwards;

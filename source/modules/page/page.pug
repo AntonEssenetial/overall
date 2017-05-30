@@ -1,12 +1,13 @@
 include ../injected/injected
 include ../head/head
 include ../scripts/scripts
+include ../module__preloader/module__preloader
 include ../../helpers/variables
 include ../icon/icon
 
 
 mixin page(data) 
-    body.page&attributes(attributes)
+    body.page&attributes(attributes).overflow
       
       +injected: block
 
@@ -44,6 +45,9 @@ mixin page(data)
         //- Noti
         +if('module__notification')
           +use('module__notification')
+
+        //- Preloader
+        +module__preloader()
 
       <!-- scripts -->
       +scripts()

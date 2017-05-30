@@ -22,6 +22,7 @@
     letter-spacing 5px
     display: block
     margin 0 0 23px 0
+    opacity 0
     
   &__str-3
     color white 
@@ -30,8 +31,9 @@
     font-size 30px
     letter-spacing 10px
     display: block
+    opacity 0
     +after('')
-      width 30px 
+      width 0px 
       height 2px 
       background-color $yellow
       display: block
@@ -51,3 +53,11 @@
     textFade()
   p
     textFade2()
+    
+  .module__text__str-2
+  .module__text__str-3
+    textFade3()
+    
+  .module__text__str-3:after 
+    width 30px 
+    transition all 1s

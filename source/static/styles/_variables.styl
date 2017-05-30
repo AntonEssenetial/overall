@@ -94,24 +94,23 @@ $col-margin = 30px
 
 
 // Label - input
-$input-size           = 18px
-$input-color          = $dark
-$input-background     = white
+$input-size           = 16px
+$input-color          = white
+$input-background     = transparent
 $input-border-radius  = 0
-$input-height         = 38px
+$input-height         = 67px
 $input-margin         = 7px 0 0 0 
 $label-margin         = 0 0 20px 0
-$label-color          = $dark 
+$label-color          = white 
 $label-size           = 11px
-$input-padding        = 10px 10px
+$input-padding        = 10px 0px
 $input-border-color   = $border
 $place-holder-default = grey2
 input-border()
-  border 1px solid $input-border-color
   trs()
   &:focus 
     border-color $dark-aqua
-    color $dark
+    color white
     trs()
 
 
@@ -358,6 +357,9 @@ textarea
   padding $input-padding
   color $input-color
   font-size $input-size
+  g-bold()
+  text-transform: uppercase
+  letter-spacing 5px
   input-border()
 select
   background: $input-background
@@ -368,7 +370,7 @@ select
   padding $input-padding
   font-size $input-size
   input-border()
-  
+
 
 // Default input
 .form__label

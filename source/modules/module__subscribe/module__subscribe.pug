@@ -1,0 +1,11 @@
+mixin module__subscribe(data)
+  - var bemClass = 'module__subscribe'
+  .module__subscribe&attributes(attributes)
+    div(class=bemClass + '__form')
+      form(action="")
+        label().form__label
+          input(type="text", placeholder='subscribe to our newstler').form__input
+          .form__label_submit
+            input(type="submit", value='').form__input_submit
+            +icon('right')
+        span(class=bemClass + '__str') Thanks for subscribing.

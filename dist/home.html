@@ -6,6 +6,11 @@
     <meta content="Murat Khatypov" name="author" />
     <meta content="Put value here" name="description" />
     <meta content="Put value here" name="keywords" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="robots" content="noodp, noydir" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <link rel="stylesheet" href="assets/css/style.min.css" />
     <meta property="og:title" content="Home" />
     <meta property="og:url" content="https://" />
@@ -26,10 +31,10 @@
     <meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml" />
     <meta name="theme-color" content="#333366" /> </head>
-  <body class="page">
+  <body class="page overflow">
     <div class="page__wrapper">
       <!-- header -->
-      <div class="header">
+      <header class="header">
         <div class="container">
           <div class="row between">
             <div class="module__logo">
@@ -80,7 +85,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </header>
       <!-- content -->
       <main class="main">
         <div class="module__top jsHeight">
@@ -119,13 +124,13 @@
             </div>
           </div>
           <div class="module__scroll-down">
-            <span class="module__scroll-down__str jsScroll">Scroll down</span>
+            <a class="module__scroll-down__str jsScroll" href="#work">Scroll down</a>
             <svg class="icon icon_down">
               <use xlink:href="assets/images/icons.svg#down"></use>
             </svg>
           </div>
         </div>
-        <div class="module__work">
+        <div class="module__work" id="work">
           <div class="container f-dash__container">
             <div class="module__text jsText">
               <span class="module__text__str">good stuff</span>
@@ -228,14 +233,16 @@
               </div>
             </div>
             <div class="row center-c">
-              <a class="btn-link" href="">More work</a>
+              <a class="btn-link" href="">More work
+                <span></span>
+              </a>
             </div>
           </div>
         </div>
       </main>
       <!-- footer -->
       <footer class="footer">
-        <div class="module__insta">
+        <div class="module__insta jsShow">
           <div class="container">
             <span class="module__insta__str">Instagramm</span>
             <span class="module__insta__str-2">#overallmurals.</span>
@@ -336,7 +343,7 @@
                 <br> F. 718.783.0760</p>
             </div>
           </div>
-          <div class="row center">
+          <div class="row between footer__resp">
             <div class="module__socials">
               <div class="module__socials__row row wrap">
                 <a class="module__socials__icon" href="#">
@@ -366,6 +373,25 @@
                 </a>
               </div>
             </div>
+            <div class="module__subscribe">
+              <div class="module__subscribe__form">
+                <form action="">
+                  <label class="form__label">
+                    <input class="form__input" type="text" placeholder="subscribe to our newstler" />
+                    <div class="form__label_submit">
+                      <input class="form__input_submit" type="submit" value="" />
+                      <svg class="icon icon_right">
+                        <use xlink:href="assets/images/icons.svg#right"></use>
+                      </svg>
+                    </div>
+                  </label>
+                  <span class="module__subscribe__str">Thanks for subscribing.</span>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom row between">
+            <span class="footer__str-2">2017, All rights reserved overallmurals</span>
           </div>
         </div>
       </footer>
@@ -375,6 +401,55 @@
           <svg class="icon icon_plus">
             <use xlink:href="assets/images/icons.svg#plus"></use>
           </svg>
+        </div>
+      </div>
+      <div class="module__share__popup jsPopup">
+        <span class="module__share__close jsClose">
+          <svg class="icon icon_close">
+            <use xlink:href="assets/images/icons.svg#close"></use>
+          </svg>
+        </span>
+        <div class="module__share__icons row wrap">
+          <a class="module__share__link" href="">
+            <svg class="icon icon_facebook">
+              <use xlink:href="assets/images/icons.svg#facebook"></use>
+            </svg>
+          </a>
+          <a class="module__share__link" href="">
+            <svg class="icon icon_twitter">
+              <use xlink:href="assets/images/icons.svg#twitter"></use>
+            </svg>
+          </a>
+          <a class="module__share__link" href="">
+            <svg class="icon icon_pinterest">
+              <use xlink:href="assets/images/icons.svg#pinterest"></use>
+            </svg>
+          </a>
+          <a class="module__share__link" href="">
+            <svg class="icon icon_linkedin">
+              <use xlink:href="assets/images/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+          <a class="module__share__link" href="">
+            <svg class="icon icon_google">
+              <use xlink:href="assets/images/icons.svg#google"></use>
+            </svg>
+          </a>
+          <a class="module__share__link" href="">
+            <svg class="icon icon_skype">
+              <use xlink:href="assets/images/icons.svg#skype"></use>
+            </svg>
+          </a>
+          <a class="module__share__link" href="">
+            <svg class="icon icon_email">
+              <use xlink:href="assets/images/icons.svg#email"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="module__preloader">
+        <div id="preloader">
+          <div id="status"></div>
         </div>
       </div>
     </div>

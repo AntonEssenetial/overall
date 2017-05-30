@@ -15,8 +15,10 @@
     position: absolute
     top -25px
     left 0px
+    opacity 0
     
   &__str-2 
+    opacity 0
     display: block 
     text-align: center
     margin 0 auto
@@ -109,6 +111,7 @@
   
   .slide-wrapper
     width 25%
+    opacity 0
     
   .slide-btn 
     width 15px 
@@ -137,6 +140,27 @@
     width auto 
     margin 60px auto 0 auto
     justify-content center
+    
+
+.jsShow.custom
+  .module__insta__str
+    animation .6s fadeUp .2s ease-out
+    animation-fill-mode: forwards;
+  .module__insta__str-2
+    animation .2s fadeTop .2s ease-out
+    animation-fill-mode: forwards;
+  .slide-wrapper:nth-child(1)
+    animation .4s fadeUp .1s ease-out
+    animation-fill-mode: forwards;
+  .slide-wrapper:nth-child(2)
+    animation .4s fadeUp .2s ease-out
+    animation-fill-mode: forwards;
+  .slide-wrapper:nth-child(3)
+    animation .4s fadeUp .3s ease-out
+    animation-fill-mode: forwards;
+  .slide-wrapper:nth-child(4)
+    animation .4s fadeUp .4s ease-out
+    animation-fill-mode: forwards;
     
 
 @keyframes slickWidth

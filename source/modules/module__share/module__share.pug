@@ -4,3 +4,22 @@ mixin module__share(data)
     div(class=bemClass + '__btn') 
       span(class=bemClass + '__str').jsShare Share 
       +icon('plus')
+
+  .module__share__popup.jsPopup
+    span(class=bemClass + '__close').jsClose
+      +icon('close')
+    div(class=bemClass + '__icons').row.wrap
+      a(href="" class=bemClass + '__link') 
+        +icon('facebook')
+      a(href="" class=bemClass + '__link') 
+        +icon('twitter')
+      a(href="" class=bemClass + '__link') 
+        +icon('pinterest')
+      a(href="" class=bemClass + '__link') 
+        +icon('linkedin')
+      a(href="" class=bemClass + '__link') 
+        +icon('google')
+      a(href="" class=bemClass + '__link') 
+        +icon('skype')
+      a(href="" class=bemClass + '__link') 
+        +icon('email')

@@ -7,6 +7,7 @@
     margin auto
     position relative
     z-index: 1
+    trs()
     
   &__icon 
     width 68px 
@@ -23,14 +24,14 @@
       position: absolute
       background: white
       transform translateY(68px)
-      trs-slow()
+      trs()
       left 0px
     &:hover:after 
       transform translateY(0px)
-      trs-slow()
+      trs()
     &:hover .icon 
       fill $dark
-      trs-slow()
+      trs()
     
   &__row 
     width 393px

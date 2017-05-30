@@ -1,0 +1,54 @@
+.module__subscribe
+  position relative
+  
+  &__form 
+    width 370px
+    height 134px
+    
+  .form__input
+    margin 0px
+
+  &__str 
+    color $yellow
+    font-size 16px
+    text-transform: uppercase
+    g-bold()
+    letter-spacing 5px
+    margin-top 5px
+    
+  .form__input_submit
+    width 30px 
+    height 12px
+    position absolute
+  .form__label_submit
+    position: absolute
+    right 0px
+    top 28px
+    width 30px
+    cursor pointer
+    +after('')
+      position: absolute
+      height 2px 
+      width 0px 
+      background: white
+      top 5px
+      left -12px 
+      trs-slow()
+    &:hover 
+      .icon 
+        transform translateX(19px)
+        trs-slow()
+        fill white
+      +after('')
+        width 19px
+        trs-slow()
+        transform translateX(19px)
+    
+  .icon 
+    fill $grey2
+    width 12px 
+    height @width
+    trs-slow()
+    
+  .label_focus .icon
+    fill white

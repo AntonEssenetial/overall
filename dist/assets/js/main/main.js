@@ -1,5 +1,13 @@
 'use strict';
 
+$(window).on('load', function() {
+    $('#status').fadeOut(); 
+    $('#preloader').delay(100).fadeOut('slow'); 
+    $('body').delay(100).css({'overflow':'visible'})
+    $('body').removeClass('overflow');
+    $('body').addClass('loaded');
+})
+
 svg4everybody();
 
 $(function() {
@@ -7,11 +15,70 @@ $(function() {
 });
   
 // Modules
+// header
+(function() {
+
+    // Hide Header on on scroll down
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = 10;
+    
+    $(window).scroll(hasScrolled);
+    
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+    
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+        var jsHeight = $(window).height();
+        // Make sure they scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+        
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            $('header').removeClass('trDown').addClass('trUp');
+
+        } else if($(this).scrollTop() < jsHeight){
+            // Scroll Up
+            $('header').removeClass('trDown');
+            
+        } else {
+            if(st + $(window).height() < $(document).height()) {
+                $('header').removeClass('trUp').addClass('trDown');
+
+            }
+        }
+        
+        lastScrollTop = st;
+    }
+
+
+    $(window).scroll(function() {
+        var jsHeight = $(window).height();
+
+        if ($(this).scrollTop() < jsHeight){  
+            $('header').removeClass('trDown');
+        }
+    });
+
+})();
+
 // main-menu
 (function() {
 
     // Main menu link border
-    var link = $('.main-menu__link, .btn-link');
+    var link = $('.main-menu__link'),
+        menu = $('.module__main-menu');
+
+    //menu.css('height', $(window).height());
 
     if(!link.hasClass('is-active')) {
         link.mouseover(function(event) {
@@ -65,10 +132,52 @@ $(function() {
     var scroll = $('.jsScroll'),
         jsHeight = $(window).height();
 
-    scroll.click(function(event) {
-        $('body').animate({
-            scrollTop: jsHeight
-        },1000);
+    // Anchor function
+    $(function() {
+        scroll.click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+})();
+
+// module__share
+(function() {
+
+    var share = $('.jsShare'),
+        popup = $('.jsPopup'),
+        close = $('.jsClose'),
+        html = $('html');
+
+    share.click(function(event) {
+        popup.addClass('jsActive'),
+        html.addClass('page_share');
+    });
+
+    close.click(function(event) {
+        popup.removeClass('jsActive'),
+        html.removeClass('page_share')
+    });
+
+})();
+
+// module__subscribe
+(function() {
+
+    // Label focus 
+    $( "form :input" ).focus(function() {
+        $( this ).parent().addClass( "label_focus" );
+    }).blur(function() {
+        $( this ).parent().removeClass( "label_focus" );
     });
 
 })();
@@ -135,11 +244,12 @@ $(function() {
     // Top section height detection
     var jsHeight = $('.jsHeight');
     function topHeight(){
-        if ($(window).width() <= 767) {
-            jsHeight.css('height', 'auto');
-        } else {
-            jsHeight.css('height', $(window).height());
-        }
+        jsHeight.css('height', $(window).height());
+        // if ($(window).width() <= 767) {
+        //     jsHeight.css('height', 'auto');
+        // } else {
+        //     jsHeight.css('height', $(window).height());
+        // }
     }
 
 
@@ -194,11 +304,26 @@ $(function() {
     $('.jsMobileDropdown').click(function(event) {
         
         var sandWitch = $('.module__main-menu'),
-            menu = $('.toggle-menu');
+            menu = $('.toggle-menu'),
+            header = $('header');
 
         sandWitch.toggleClass('active');        
         menu.toggleClass('active');
         $('html').toggleClass('page_mobile-menu');
+
+
+        if(menu.hasClass('active')) {
+            document.ontouchmove = function(event){
+                event.preventDefault();
+            }
+        }
+        else {
+            document.ontouchmove = function(e) {
+                e.stopPropagation();
+            };
+        }
+        // Header class
+        //header.toggleClass('trDown');
         
         // Disabled scroll
         if(!scrollers[0].element.hasClass('mCS_disabled')){

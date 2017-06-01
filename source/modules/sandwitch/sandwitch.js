@@ -54,6 +54,18 @@
     ]
 
 
+    $(document).ready(function() {  
+        $("html").niceScroll({
+            cursorcolor: "#fbae11",
+            cursorwidth: "10px",
+            cursorborder: "0px solid #fff", 
+            cursorborderradius: "0px", 
+            mousescrollstep: 40,
+            scrollspeed: 80
+        });
+    });
+
+
     // $(window).on("load resize",function(){
     //     $('body').css('height', $(window).height());
     //     // scrollers[0].element.mCustomScrollbar(

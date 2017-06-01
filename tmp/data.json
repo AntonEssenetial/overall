@@ -1,4 +1,23 @@
 {
+	"breadCrumbs": {
+		"default": [
+			{
+				"type": "link",
+				"title": "Home"
+			},
+			{
+				"type": "link",
+				"title": "Category"
+			},
+			{
+				"type": "link",
+				"title": "Subcategory"
+			},
+			{
+				"title": "Page"
+			}
+		]
+	},
 	"pageList": {
 		"data": [
 			{
@@ -29,25 +48,6 @@
 			"images": "assets/images",
 			"fonts": "assets/fonts"
 		}
-	},
-	"breadCrumbs": {
-		"default": [
-			{
-				"type": "link",
-				"title": "Home"
-			},
-			{
-				"type": "link",
-				"title": "Category"
-			},
-			{
-				"type": "link",
-				"title": "Subcategory"
-			},
-			{
-				"title": "Page"
-			}
-		]
 	},
 	"footerNav": {
 		"default": [

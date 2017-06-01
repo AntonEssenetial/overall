@@ -29,9 +29,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 
-// JQuery
-// Browser feature detection library for HTML5/CSS3
-//= require jquery/dist/jquery.js
+
 
 
 // FastclickJS
@@ -48,16 +46,19 @@
 //= require svg4everybody/dist/svg4everybody.js
 
 
-// SVG4Everybody
-//= require reveal/scrollreveal.min.js
-
-
 // Slick
 //= require slick/slick.min.js
 
 
-// Bx slider
-//= require bxSlider/jquery.bxslider.min.js
+// Parallax
+//= require parallax/TweenMax.min.js
+//= require parallax/ScrollMagic.min.js
+//= require parallax/animation.gsap.min.js
+//= require parallax/debug.addIndicators.min.js
+
+
+// Nice scroll
+//= require niceScroll/jquery.nicescroll.min.js
 
 
 // Scorllbar

@@ -2,7 +2,7 @@ include ../module__text/module__text
 
 mixin module__work(data)
   - var bemClass = 'module__work'
-  #work.module__work&attributes(attributes)
+  section#work.module__work&attributes(attributes)
     .container.f-dash__container
       +module__text()
       div(class=bemClass + '__row').row.wrap.f__row  
@@ -12,7 +12,9 @@ mixin module__work(data)
               a(href='single-page.html' class=bemClass + '__link') 
                 img(src='assets/images/work/1.jpg' alt='hbo animals' class=bemClass + '__img')
                 div(class=bemClass + '__title') 
-                  span(class=bemClass + '__str') Hbo animals
+                  span(class=bemClass + '__str') Hbo
+                div(class=bemClass + '__title').module__work__title-2 
+                  span(class=bemClass + '__str') animals
       .row.center-c
         a(href='').btn-link More work
           span

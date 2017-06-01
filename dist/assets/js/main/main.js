@@ -98,6 +98,8 @@ $(function() {
 
 (function() {
 
+    
+
     // instagramm carousel
     $(document).ready(function() {
         
@@ -121,6 +123,22 @@ $(function() {
             }
         });
 
+    });
+
+    // Resize img in carousel
+    function imgResize(){
+        var img = $('.img img'),
+            wrap = $('.img');
+        img.css('height',$('.slide-wrapper').width());
+        img.css('width',$('.slide-wrapper').width());
+        wrap.css('height',$('.slide-wrapper').width());
+    }
+
+    $(window).on('load', function() {
+        imgResize()
+    });
+    $(window).on('resize', function() {
+        imgResize()
     });
 
 })();
@@ -225,7 +243,11 @@ $(function() {
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 6000,
+            pauseOnHover: false,
             dots: true,
+            speed: 1000,
             customPaging: function(slider, i) {
                 var title = $(slider.$slides[i]).data('slide')
                 return '<div class="slick-wrapper"><span class="slick-button"></span></div><span class="slick-title">' + title + '</span>';
@@ -253,6 +275,35 @@ $(function() {
     }
 
 
+    // Parallax scrolling
+    var controller = new ScrollMagic.Controller({
+            globalSceneOptions: {
+                triggerHook: "onEnter", 
+                duration: "200%"
+            }
+        });
+    // build scenes
+    new ScrollMagic.Scene({
+        triggerElement: ".parallax"
+    })
+    .setTween(".parallax > div", {
+        y: "80%", 
+        ease: Linear.easeNone
+    }).addIndicators()
+    .addTo(controller);
+
+    // build scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".module__scroll-down"
+    })
+    .setTween(".module__top-slider__title", 0.5, {
+        top: -100
+    }) // trigger a TweenMax.to tween
+    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+    .addTo(controller);
+
+
+    // Height detect
     $(window).on('load', function() {
         topHeight();
     });
@@ -351,6 +402,18 @@ $(function() {
             }
         }
     ]
+
+
+    $(document).ready(function() {  
+        $("html").niceScroll({
+            cursorcolor: "#fbae11",
+            cursorwidth: "10px",
+            cursorborder: "0px solid #fff", 
+            cursorborderradius: "0px", 
+            mousescrollstep: 40,
+            scrollspeed: 80
+        });
+    });
 
 
     // $(window).on("load resize",function(){

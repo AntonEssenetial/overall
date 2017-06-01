@@ -2,6 +2,8 @@
 
 (function() {
 
+    
+
     // instagramm carousel
     $(document).ready(function() {
         
@@ -25,6 +27,22 @@
             }
         });
 
+    });
+
+    // Resize img in carousel
+    function imgResize(){
+        var img = $('.img img'),
+            wrap = $('.img');
+        img.css('height',$('.slide-wrapper').width());
+        img.css('width',$('.slide-wrapper').width());
+        wrap.css('height',$('.slide-wrapper').width());
+    }
+
+    $(window).on('load', function() {
+        imgResize()
+    });
+    $(window).on('resize', function() {
+        imgResize()
     });
 
 })();

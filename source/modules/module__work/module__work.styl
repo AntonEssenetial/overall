@@ -1,6 +1,6 @@
 .module__work
   background: linear-gradient(to bottom, #191919 0%,#191919 717px,#f6f6f6 717px,#f6f6f6 100%);
-  padding 140px 0 175px 0
+  padding 140px 0 90px 0
    
   &__img 
     display: block
@@ -8,7 +8,8 @@
     height 100%
     
   &__row 
-    margin-top 120px
+    margin-top 115px
+    margin-bottom 55px
     
   &__link 
     display: block
@@ -48,6 +49,10 @@
     left 0px
     top 70px
     position: absolute
+    height 73px
+    
+  &__title-2
+    top 143px
     
   .f__col
     flex 1
@@ -57,29 +62,33 @@
     position: relative
     margin-bottom 30px
 
+  &__title &__str 
+    transition .3s width .1s
+  
+  &__title-2 &__str 
+    transition .3s width .3s
     
-  &__item:hover &__str 
+  &__item:hover &__title &__str 
     width 100%
-    transition width .5s
+    transition .3s width .1s
+    
+  &__item:hover &__title-2 &__str
+    transition .3s width .3s
     
   &__item:hover &__link:before 
     opacity 0.8
     trs()
-    
-  &__row 
-    margin-top 115px
-    margin-bottom 35px
     
 .jsShow 
   opacity 0 
   
 .jsShow.custom 
   &:nth-child(3n+1)
-    animation fadeUp .3s ease-out
+    animation .4s fadeUp .2s ease-out
     animation-fill-mode: forwards;
   &:nth-child(3n+2)
-    animation fadeUp .6s ease-out
+    animation .4s fadeUp .4s ease-out
     animation-fill-mode: forwards;
   &:nth-child(3n+3)
-    animation fadeUp .9s ease-out
+    animation .4s fadeUp .6s ease-out
     animation-fill-mode: forwards;

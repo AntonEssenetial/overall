@@ -2127,7 +2127,7 @@ body
     overflow-y: hidden;
 
     min-width: 320px;
-    max-width: 1920px;
+    max-width: 100%;
     margin: 0 auto;
 
     background: #191919;
@@ -2241,7 +2241,7 @@ h1
     display: block;
 
     width: 100%;
-    height: 4px;
+    height: 5px;
 
     -webkit-transition: ease-in-out .2s;
        -moz-transition: ease-in-out .2s;
@@ -3064,6 +3064,11 @@ h1
             animation-fill-mode: forwards;
 }
 
+.module__logo
+{
+    mix-blend-mode: difference;
+}
+
 .module__logo__link
 {
     display: block;
@@ -3072,7 +3077,7 @@ h1
 .module__logo svg
 {
     position: relative;
-    left: -15px;
+    top: 10px;
 
     display: block;
 }
@@ -3123,7 +3128,11 @@ h1
     font-family: 'GiorgioSans-Bold-Web';
     font-size: 16px;
 
+    position: relative;
+
     display: inline-block;
+
+    width: 130px;
 
     cursor: pointer;
     -webkit-transition: ease-in-out .2s;
@@ -3131,18 +3140,53 @@ h1
         -ms-transition: ease-in-out .2s;
          -o-transition: ease-in-out .2s;
             transition: ease-in-out .2s;
+    text-align: center;
     letter-spacing: 6px;
     text-transform: uppercase;
 
     color: #fff !important;
 }
 
+.module__scroll-down__str::after
+{
+    position: absolute;
+    z-index: 1;
+    bottom: 6px;
+    left: 64px;
+
+    display: block;
+
+    width: 2px;
+    height: 0;
+
+    content: '';
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+
+    background: #fff;
+}
+
+.module__scroll-down__str:hover::after
+{
+    height: 18px;
+
+    content: '';
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+}
+
 .module__scroll-down .icon_down
 {
     display: block;
 
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     margin: 27px auto 0 auto;
 
     -webkit-transition: ease-in-out .2s;
@@ -3800,6 +3844,12 @@ h1
     height: 19px;
     margin: auto;
 
+    -webkit-transition: ease-in-out .2s;
+       -moz-transition: ease-in-out .2s;
+        -ms-transition: ease-in-out .2s;
+         -o-transition: ease-in-out .2s;
+            transition: ease-in-out .2s;
+
     fill: #fff;
 }
 
@@ -3863,6 +3913,12 @@ h1
 
 .module__socials__icon:hover .icon
 {
+    -webkit-transition: ease-in-out .2s;
+       -moz-transition: ease-in-out .2s;
+        -ms-transition: ease-in-out .2s;
+         -o-transition: ease-in-out .2s;
+            transition: ease-in-out .2s;
+
     fill: #191919;
 }
 
@@ -4284,7 +4340,7 @@ h1
     position: absolute;
     z-index: 1;
     top: 38%;
-    right: 55px;
+    right: 50px;
 }
 
 .module__top-slider .slick-dots li
@@ -4450,7 +4506,7 @@ h1
 
     width: 100%;
     height: 110%;
-    margin-left: 30px;
+    margin-left: -30px;
 
     content: '';
     -webkit-transition: ease-in-out .2s;
@@ -4459,7 +4515,7 @@ h1
          -o-transition: ease-in-out .2s;
             transition: ease-in-out .2s;
 
-    background-color: #fff;
+    background-color: #fbae11;
 }
 
 .module__top-slider .slick-dots .slick-button:hover::after
@@ -4578,15 +4634,11 @@ h1
         filter: alpha(opacity=0);
 }
 
-.parallax .slide
-{
-    position: relative;
-    top: -40%;
-}
-
 .module__top
 {
     position: relative;
+
+    overflow: hidden;
 }
 
 .module__work
@@ -5205,6 +5257,32 @@ h1
     {
         width: 50%;
         padding-left: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    .jsShow
+    {
+        opacity: 1;
+
+        -ms-filter: none;
+            filter: none;
+    }
+
+    .jsShow.custom,
+    .jsShow.custom .slide-wrapper
+    {
+        -webkit-animation: none !important;
+           -moz-animation: none !important;
+            -ms-animation: none !important;
+             -o-animation: none !important;
+                animation: none !important;
+
+        opacity: 1 !important;
+
+        -ms-filter: none !important;
+            filter: none !important;
     }
 }
 

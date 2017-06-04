@@ -1,0 +1,15 @@
+mixin module__page-slider(data)
+  - var bemClass = 'module__page-slider'
+  .module__page-slider&attributes(attributes)
+    .jsPageSlider
+      img(src="assets/images/slider/2.jpg", alt="slide")
+      img(src="assets/images/slider/3.jpg", alt="slide")
+    div(class=bemClass + '__nav').row.center.between 
+      .slick-prev-1
+        +icon('left')
+      .slide-count-wrap.row.center
+        .current
+        .separator
+        .total
+      .slick-next-1
+        +icon('left')

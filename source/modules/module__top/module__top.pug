@@ -1,11 +1,16 @@
 include ../module__top-slider/module__top-slider
 include ../module__scroll-down/module__scroll-down
+include ../module__top-content/module__top-content
 
 mixin module__top(data)
   - var bemClass = 'module__top'
   section.module__top&attributes(attributes).jsHeight
 
-    +module__top-slider()
+    if data.topSlider
+      +module__top-slider()
 
+    else 
+      +module__top-content()
+    
     +module__scroll-down()
     

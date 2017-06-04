@@ -1,0 +1,75 @@
+.module__page-nav
+  height 333px
+  background: #f2f2f2
+  
+  &__link 
+    position: relative
+    width 50%
+    height 333px
+    
+  &__bg 
+    height 333px 
+    width 0
+    position: absolute
+    top 0px 
+    left 0px
+    transition all ease-in-out .5s
+    background-position center 
+    background-repeat no-repeat
+    opacity: 0.2
+    
+  &__link:hover &__bg 
+    width 100% 
+    transition all ease-in-out .5s
+    
+  &__link:hover &__arrow::after
+    width 26px 
+    transition all ease-in-out .5s
+    
+  .icon 
+    width 13px 
+    height @width
+    color $dark
+    margin auto 0
+    
+  &__name 
+    bold()
+    font-size 16px 
+    text-transform: uppercase 
+    color $dark
+  
+  &__arrow
+    display: flex
+    position: relative
+    width 30px
+    +after('')
+      width 0px 
+      height 3px
+      background: $dark
+      position: absolute
+      display: block
+      top 5px
+      left 0px
+      transition all ease-in-out .5s
+      
+  &__prev &__arrow::after
+    content ''
+    left auto 
+    right 0px
+    
+  &__prev &__name 
+    margin-left 22px
+    
+  &__next &__name 
+    margin-right 22px
+    
+  &__cube
+    width 232px
+    
+  &__prev 
+    .icon 
+      margin-right auto
+    
+  &__next 
+    .icon 
+      margin-left auto

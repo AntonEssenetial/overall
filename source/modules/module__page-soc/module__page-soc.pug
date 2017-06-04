@@ -1,0 +1,12 @@
+mixin module__page-soc(data)
+  - var bemClass = 'module__page-soc'
+  .module__page-soc&attributes(attributes)
+    div(class=bemClass + '__row').row.wrap.center-c
+      a(href="#" class=bemClass + '__icon') 
+        +icon('facebook')
+      a(href="#" class=bemClass + '__icon')
+        +icon('twitter')
+      a(href="#" class=bemClass + '__icon') 
+        +icon('pinterest')
+      a(href="#" class=bemClass + '__icon').jsShare 
+        +icon('plus')

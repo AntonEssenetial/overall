@@ -1,2 +1,29 @@
+include ../module__top/module__top
+include ../module__page-slider/module__page-slider
+include ../module__page-img/module__page-img
+include ../module__page-soc/module__page-soc
+include ../module__page-nav/module__page-nav
+include ../module__page-vid/module__page-vid
+include ../module__page-content/module__page-content
+
 mixin page__single(data)
+
+  +module__top({
+    topSlider: false
+  })
+
+  +module__page-content()
+
+
+  if data.img 
+    +module__page-slider()
+    +module__page-img()
+
+  else 
+    +module__page-vid()
+
+  +module__page-soc()
+
+  +module__page-nav()
+
     

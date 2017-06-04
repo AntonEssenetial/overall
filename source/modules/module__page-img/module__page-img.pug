@@ -1,0 +1,15 @@
+mixin module__page-img(data)
+  - var bemClass = 'module__page-img'
+  .module__page-img&attributes(attributes)
+    div(class=bemClass + '__items')
+      img(src="assets/images/background/bg4.jpg", alt="img" class=bemClass + '__img').jsShow.aligncenter
+      img(src="assets/images/background/bg5.jpg", alt="img" class=bemClass + '__img').jsShow.aligncenter
+      img(src="assets/images/background/bg6.jpg", alt="img" class=bemClass + '__img').jsShow.alignleft
+      img(src="assets/images/background/bg7.jpg", alt="img" class=bemClass + '__img').jsShow.alignright
+      img(src="assets/images/background/bg4.jpg", alt="img" class=bemClass + '__img').jsShow.aligncenter
+      img(src="assets/images/background/bg5.jpg", alt="img" class=bemClass + '__img').jsShow.aligncenter
+      img(src="assets/images/background/bg6.jpg", alt="img" class=bemClass + '__img').jsShow.alignleft
+      img(src="assets/images/background/bg7.jpg", alt="img" class=bemClass + '__img').jsShow.alignright
+    .row.center-c
+      a(href="").btn-link View full gallery on our Flickr
+        span

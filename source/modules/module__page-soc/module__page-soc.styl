@@ -1,0 +1,41 @@
+.module__page-soc
+  padding 130px 0
+
+  .icon 
+    width 19px 
+    height @width
+    fill $dark
+    margin auto
+    position relative
+    z-index: 1
+    trs()
+    
+  .icon_plus 
+    width 14px 
+    height @width
+    
+  &__icon 
+    width 68px 
+    height @width
+    display: flex
+    background-color #f2f2f2
+    margin 0 30px 0px 0
+    position: relative
+    overflow: hidden
+    +after('')
+      width 100%
+      height 100%
+      display: block
+      position: absolute
+      background: $dark
+      transform translateY(68px)
+      trs()
+      left 0px
+    &:hover:after 
+      transform translateY(0px)
+      trs()
+    &:hover .icon 
+      fill white
+      trs()
+    &:last-child 
+      margin 0px

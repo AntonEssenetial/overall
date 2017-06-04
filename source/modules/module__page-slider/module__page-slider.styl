@@ -1,0 +1,39 @@
+.module__page-slider
+  background: #f2f2f2
+  
+  img 
+    cursor: -webkit-grab;
+
+  &__nav 
+    height 110px
+    max-width 680px
+    margin 0 auto
+    
+  .icon
+    color $dark
+    height 14px
+      
+.slick-next-1
+.slick-prev-1
+  height 14px
+  cursor pointer
+  
+.slick-next-1
+  .icon
+    transform rotateZ(180deg)
+    
+.current 
+.total 
+  font-size 16px 
+  opacity 0.5
+  color $dark
+  g-bold()
+  +before('0')
+    font-size 16px
+  
+.current 
+  opacity 1
+  +after('/')
+    font-size 15px
+    margin 0 10px
+    opacity 0.5

@@ -1,0 +1,6 @@
+include ../module__text/module__text
+
+mixin module__page-content(data)
+  - var bemClass = 'module__page-content'
+  section.module__page-content&attributes(attributes)#work
+    +module__text-2().module__text_content

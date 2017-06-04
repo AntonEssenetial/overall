@@ -65,8 +65,17 @@
             var scene2 = new ScrollMagic.Scene({
                 triggerElement: ".f__col:nth-child(4)"
             })
-            .setTween(".module__text__str", 0.5, {
+            .setTween(".module__work .module__text__str", 0.5, {
                 top: 100
+            }) // trigger a TweenMax.to tween
+            .addTo(controller);
+
+            // Text animation
+            var scene4 = new ScrollMagic.Scene({
+                triggerElement: ".module__page-content"
+            })
+            .setTween(".module__page-content .module__text__str", 0.5, {
+                top: -25
             }) // trigger a TweenMax.to tween
             .addTo(controller);
 

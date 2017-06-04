@@ -143,6 +143,48 @@ $(function() {
 
 })();
 
+// module__page-slider
+(function() {
+
+    // about slick slider
+    var $aboutSlider = $('.jsPageSlider');
+    var slideCount = null;
+
+    $( document ).ready(function(){
+        $aboutSlider.slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            //fade: true,
+            nextArrow: '.slick-next-1',
+            prevArrow: '.slick-prev-1'
+        });
+    });
+
+    $aboutSlider.on('init', function(event, slick){
+        slideCount = slick.slideCount;
+        setSlideCount();
+        setCurrentSlideNumber(slick.currentSlide);
+    });
+    
+    $aboutSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        setCurrentSlideNumber(nextSlide);
+    });
+    
+    function setSlideCount() {
+        var $el = $('.slide-count-wrap').find('.total');
+        $el.text(slideCount);
+    }
+    
+    function setCurrentSlideNumber(currentSlide) {
+        var $el = $('.slide-count-wrap').find('.current');
+        $el.text(currentSlide + 1);
+    }
+
+})();
+
 // module__scroll-down
 (function() {
 
@@ -177,13 +219,14 @@ $(function() {
         html = $('html');
 
     share.click(function(event) {
-        popup.addClass('jsActive'),
+        popup.addClass('jsActive');
         html.addClass('page_share');
+        return false;
     });
 
     close.click(function(event) {
         popup.removeClass('jsActive'),
-        html.removeClass('page_share')
+        html.removeClass('page_share');
     });
 
 })();
@@ -330,8 +373,17 @@ $(function() {
             var scene2 = new ScrollMagic.Scene({
                 triggerElement: ".f__col:nth-child(4)"
             })
-            .setTween(".module__text__str", 0.5, {
+            .setTween(".module__work .module__text__str", 0.5, {
                 top: 100
+            }) // trigger a TweenMax.to tween
+            .addTo(controller);
+
+            // Text animation
+            var scene4 = new ScrollMagic.Scene({
+                triggerElement: ".module__page-content"
+            })
+            .setTween(".module__page-content .module__text__str", 0.5, {
+                top: -25
             }) // trigger a TweenMax.to tween
             .addTo(controller);
 

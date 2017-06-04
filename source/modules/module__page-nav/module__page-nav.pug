@@ -1,0 +1,17 @@
+mixin module__page-nav(data)
+  - var bemClass = 'module__page-nav'
+  .module__page-nav&attributes(attributes)
+    .row.between
+      a(href="" class=bemClass + '__link').row.center-c
+        span(class=bemClass + '__bg' style='background-image: url("assets/images/slider/2.jpg")' class=bemClass + '__prev')
+        .row.center(class=bemClass + '__prev')
+          span.module__page-nav__arrow
+            +icon('left')
+          span(class=bemClass + '__name') previous project
+      div(class=bemClass + '__cube') 
+      a(href="" class=bemClass + '__link').row.center-c
+        span(class=bemClass + '__bg' style='background-image: url("assets/images/slider/3.jpg")')
+        .row.center(class=bemClass + '__next')
+          span(class=bemClass + '__name') Next project
+          span.module__page-nav__arrow
+            +icon('right')

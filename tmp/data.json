@@ -1,4 +1,39 @@
 {
+	"pageList": {
+		"data": [
+			{
+				"title": "Home",
+				"url": "home"
+			},
+			{
+				"title": "Single-page",
+				"url": "single-page"
+			},
+			{
+				"title": "Single-page",
+				"url": "single-page-2"
+			},
+			{
+				"title": "About",
+				"url": "about"
+			},
+			{
+				"title": "Contacts",
+				"url": "contact"
+			}
+		]
+	},
+	"config": {
+		"projectName": "Overall",
+		"lang": "en",
+		"path": {
+			"favicons": "assets/favicons",
+			"styles": "assets/css",
+			"scripts": "assets/javascripts",
+			"images": "assets/images",
+			"fonts": "assets/fonts"
+		}
+	},
 	"breadCrumbs": {
 		"default": [
 			{
@@ -17,37 +52,6 @@
 				"title": "Page"
 			}
 		]
-	},
-	"pageList": {
-		"data": [
-			{
-				"title": "Home",
-				"url": "home"
-			},
-			{
-				"title": "Single-page",
-				"url": "single-page"
-			},
-			{
-				"title": "About",
-				"url": "about"
-			},
-			{
-				"title": "Contacts",
-				"url": "contacts"
-			}
-		]
-	},
-	"config": {
-		"projectName": "Overall",
-		"lang": "en",
-		"path": {
-			"favicons": "assets/favicons",
-			"styles": "assets/css",
-			"scripts": "assets/javascripts",
-			"images": "assets/images",
-			"fonts": "assets/fonts"
-		}
 	},
 	"footerNav": {
 		"default": [
@@ -181,7 +185,7 @@
 			},
 			{
 				"title": "Work",
-				"url": "work",
+				"url": "single-page",
 				"submenu": false
 			},
 			{

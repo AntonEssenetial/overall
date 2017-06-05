@@ -7,8 +7,11 @@ pageList:
       title: Single-page
       url: single-page
     -
+      title: Single-page
+      url: single-page-2
+    -
       title: About 
       url: about
     -
       title: Contacts
-      url: contacts
+      url: contact

@@ -1,0 +1,24 @@
+mixin module__page-form(data)
+  - var bemClass = 'module__page-form'
+  .module__page-form&attributes(attributes)
+    div(class=bemClass + '__wrap').jsText 
+      span(class=bemClass + '__str') Start
+      span(class=bemClass + '__str-2') good stuff
+      span(class=bemClass + '__str-3') Start a project
+
+      form(class=bemClass + '__form') 
+        .row 
+          .col__50.col_margin-30
+            label().form__label.jsShow
+              input(type="text" placeholder='Name*').form__input
+            label().form__label.jsShow.form__label_reset
+              input(type="text" placeholder='Email*').form__input
+          .col__50
+            label().form__label.jsShow
+              input(type="text" placeholder='Company').form__input
+            label().form__label.jsShow.form__label_reset
+              input(type="text" placeholder='Phone num').form__input
+        label().form__label.jsShow.form__label_reset
+          textarea.form__input.form__area(placeholder='What we need to know?')
+        .row.center-c.jsShow 
+          button.btn-send Send Request

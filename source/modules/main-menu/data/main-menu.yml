@@ -7,7 +7,7 @@
         submenu: false
       -
         title: Work
-        url: work
+        url: single-page
         submenu: false
       -
         title: About

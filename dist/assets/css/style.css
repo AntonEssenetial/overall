@@ -3085,6 +3085,425 @@ h1
     mix-blend-mode: difference;
 }
 
+.module__page-contacts
+{
+    padding: 120px 0;
+
+    background: #191919;
+}
+
+.module__page-contacts__wrap
+{
+    width: 973px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+
+.module__page-contacts__str
+{
+    font-family: 'GiorgioSans-Bold-Web';
+    font-size: 16px;
+
+    display: block;
+
+    margin: 0 0 30px 0;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: #fbae11;
+}
+
+.module__page-contacts__str-2,
+.module__page-contacts__link
+{
+    font-family: 'GiorgioSans-Bold-Web';
+    font-size: 24px;
+    line-height: 32px;
+
+    display: block;
+
+    margin: 0 0 48px 0;
+
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.module__page-contacts__soc
+{
+    margin: 70px 0 0 0;
+}
+
+.module__page-contacts__link
+{
+    position: relative;
+
+    display: inline-block;
+}
+
+.module__page-contacts__link::after
+{
+    position: absolute;
+    bottom: -10px;
+
+    display: block;
+
+    width: 0;
+    height: 2px;
+
+    content: '';
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+
+    background: #fbae11;
+}
+
+.module__page-contacts__link:hover
+{
+    color: #fff;
+}
+
+.module__page-contacts__link:hover::after
+{
+    width: 100%;
+
+    content: '';
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+}
+
+.module__page-contacts .module__socials__icon
+{
+    background: transparent;
+}
+
+.module__page-contacts .module__socials__icon::before
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+
+    background: #252525;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(1):before
+{
+    -webkit-animation: 300ms share 301ms ease-out;
+       -moz-animation: 300ms share 301ms ease-out;
+        -ms-animation: 300ms share 301ms ease-out;
+         -o-animation: 300ms share 301ms ease-out;
+            animation: 300ms share 301ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(1) .icon
+{
+    -webkit-animation: 300ms fade 301ms ease-out;
+       -moz-animation: 300ms fade 301ms ease-out;
+        -ms-animation: 300ms fade 301ms ease-out;
+         -o-animation: 300ms fade 301ms ease-out;
+            animation: 300ms fade 301ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(2):before
+{
+    -webkit-animation: 600ms share 302ms ease-out;
+       -moz-animation: 600ms share 302ms ease-out;
+        -ms-animation: 600ms share 302ms ease-out;
+         -o-animation: 600ms share 302ms ease-out;
+            animation: 600ms share 302ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(2) .icon
+{
+    -webkit-animation: 600ms fade 302ms ease-out;
+       -moz-animation: 600ms fade 302ms ease-out;
+        -ms-animation: 600ms fade 302ms ease-out;
+         -o-animation: 600ms fade 302ms ease-out;
+            animation: 600ms fade 302ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(3):before
+{
+    -webkit-animation: 900ms share 303ms ease-out;
+       -moz-animation: 900ms share 303ms ease-out;
+        -ms-animation: 900ms share 303ms ease-out;
+         -o-animation: 900ms share 303ms ease-out;
+            animation: 900ms share 303ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(3) .icon
+{
+    -webkit-animation: 900ms fade 303ms ease-out;
+       -moz-animation: 900ms fade 303ms ease-out;
+        -ms-animation: 900ms fade 303ms ease-out;
+         -o-animation: 900ms fade 303ms ease-out;
+            animation: 900ms fade 303ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(4):before
+{
+    -webkit-animation: 1200ms share 304ms ease-out;
+       -moz-animation: 1200ms share 304ms ease-out;
+        -ms-animation: 1200ms share 304ms ease-out;
+         -o-animation: 1200ms share 304ms ease-out;
+            animation: 1200ms share 304ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(4) .icon
+{
+    -webkit-animation: 1200ms fade 304ms ease-out;
+       -moz-animation: 1200ms fade 304ms ease-out;
+        -ms-animation: 1200ms fade 304ms ease-out;
+         -o-animation: 1200ms fade 304ms ease-out;
+            animation: 1200ms fade 304ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(5):before
+{
+    -webkit-animation: 1500ms share 305ms ease-out;
+       -moz-animation: 1500ms share 305ms ease-out;
+        -ms-animation: 1500ms share 305ms ease-out;
+         -o-animation: 1500ms share 305ms ease-out;
+            animation: 1500ms share 305ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(5) .icon
+{
+    -webkit-animation: 1500ms fade 305ms ease-out;
+       -moz-animation: 1500ms fade 305ms ease-out;
+        -ms-animation: 1500ms fade 305ms ease-out;
+         -o-animation: 1500ms fade 305ms ease-out;
+            animation: 1500ms fade 305ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(6):before
+{
+    -webkit-animation: 1800ms share 306ms ease-out;
+       -moz-animation: 1800ms share 306ms ease-out;
+        -ms-animation: 1800ms share 306ms ease-out;
+         -o-animation: 1800ms share 306ms ease-out;
+            animation: 1800ms share 306ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(6) .icon
+{
+    -webkit-animation: 1800ms fade 306ms ease-out;
+       -moz-animation: 1800ms fade 306ms ease-out;
+        -ms-animation: 1800ms fade 306ms ease-out;
+         -o-animation: 1800ms fade 306ms ease-out;
+            animation: 1800ms fade 306ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(7):before
+{
+    -webkit-animation: 2100ms share 307ms ease-out;
+       -moz-animation: 2100ms share 307ms ease-out;
+        -ms-animation: 2100ms share 307ms ease-out;
+         -o-animation: 2100ms share 307ms ease-out;
+            animation: 2100ms share 307ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(7) .icon
+{
+    -webkit-animation: 2100ms fade 307ms ease-out;
+       -moz-animation: 2100ms fade 307ms ease-out;
+        -ms-animation: 2100ms fade 307ms ease-out;
+         -o-animation: 2100ms fade 307ms ease-out;
+            animation: 2100ms fade 307ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(8):before
+{
+    -webkit-animation: 2400ms share 308ms ease-out;
+       -moz-animation: 2400ms share 308ms ease-out;
+        -ms-animation: 2400ms share 308ms ease-out;
+         -o-animation: 2400ms share 308ms ease-out;
+            animation: 2400ms share 308ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(8) .icon
+{
+    -webkit-animation: 2400ms fade 308ms ease-out;
+       -moz-animation: 2400ms fade 308ms ease-out;
+        -ms-animation: 2400ms fade 308ms ease-out;
+         -o-animation: 2400ms fade 308ms ease-out;
+            animation: 2400ms fade 308ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(9):before
+{
+    -webkit-animation: 2700ms share 309ms ease-out;
+       -moz-animation: 2700ms share 309ms ease-out;
+        -ms-animation: 2700ms share 309ms ease-out;
+         -o-animation: 2700ms share 309ms ease-out;
+            animation: 2700ms share 309ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(9) .icon
+{
+    -webkit-animation: 2700ms fade 309ms ease-out;
+       -moz-animation: 2700ms fade 309ms ease-out;
+        -ms-animation: 2700ms fade 309ms ease-out;
+         -o-animation: 2700ms fade 309ms ease-out;
+            animation: 2700ms fade 309ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(10):before
+{
+    -webkit-animation: 3000ms share 310ms ease-out;
+       -moz-animation: 3000ms share 310ms ease-out;
+        -ms-animation: 3000ms share 310ms ease-out;
+         -o-animation: 3000ms share 310ms ease-out;
+            animation: 3000ms share 310ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-contacts .module__socials.custom .module__socials__icon:nth-child(10) .icon
+{
+    -webkit-animation: 3000ms fade 310ms ease-out;
+       -moz-animation: 3000ms fade 310ms ease-out;
+        -ms-animation: 3000ms fade 310ms ease-out;
+         -o-animation: 3000ms fade 310ms ease-out;
+            animation: 3000ms fade 310ms ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
 .module__page-content
 {
     padding: 140px 0 110px 0;
@@ -3100,9 +3519,292 @@ h1
     padding-bottom: 20px;
 }
 
+.module__page-flickr
+{
+    padding: 115px 0 150px 0;
+
+    background: #f2f2f2;
+}
+
+.module__page-form
+{
+    background: #f2f2f2;
+}
+
+.module__page-form__wrap
+{
+    position: relative;
+    top: -150px;
+
+    width: 973px;
+    margin: 0 auto;
+    padding: 100px;
+
+    background: #fff;
+}
+
+.module__page-form .form__input:focus
+{
+    color: #191919;
+}
+
+.module__page-form .form__input
+{
+    height: 45px;
+
+    color: #191919;
+}
+
+.module__page-form .form__label
+{
+    margin: 0 0 76px 0;
+
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.module__page-form .form__label_reset
+{
+    margin: 0 0 66px 0;
+}
+
+.module__page-form .btn-send
+{
+    font-family: 'GiorgioSans-Bold-Web';
+    font-size: 16px;
+
+    position: relative;
+
+    width: 366px;
+    height: 48px;
+    padding: 0 20px;
+
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    border: 2px solid #191919;
+}
+
+.module__page-form .btn-send::after
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 0;
+
+    content: '';
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+
+    background: #191919;
+}
+
+.module__page-form .btn-send:hover
+{
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+
+    color: #fff;
+}
+
+.module__page-form .btn-send:hover:after
+{
+    height: 100%;
+
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+}
+
+.module__page-form textarea
+{
+    height: 120px !important;
+}
+
+.module__page-form__str
+{
+    font-family: 'GiorgioSans-Bold-Web';
+    font-size: 150px;
+    line-height: 144px;
+
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 144px;
+    padding-left: 49px;
+
+    text-align: center;
+    letter-spacing: 40px;
+    text-transform: uppercase;
+
+    opacity: 0;
+    color: #f7f7f7;
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+        filter: alpha(opacity=0);
+}
+
+.module__page-form__str-2
+{
+    font-family: 'GiorgioSans-Bold-Web';
+    font-size: 16px;
+
+    position: relative;
+
+    display: block;
+
+    margin: 0 0 23px 0;
+
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    opacity: 0;
+    color: #fbae11;
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+        filter: alpha(opacity=0);
+}
+
+.module__page-form__str-3
+{
+    font-family: 'GiorgioSans-Bold-Web';
+    font-size: 30px;
+
+    position: relative;
+    position: relative;
+    left: 9px;
+
+    display: block;
+
+    text-align: center;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+
+    opacity: 0;
+    color: #191919;
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+        filter: alpha(opacity=0);
+}
+
+.module__page-form__str-3::after
+{
+    position: relative;
+    left: -9px;
+
+    display: block;
+
+    width: 0;
+    height: 2px;
+    margin: 25px auto 24px auto;
+
+    content: '';
+
+    background-color: #fbae11;
+}
+
+.module__page-form .label_focus::after
+{
+    background: #fbae11 !important;
+}
+
+.module__page-form__form
+{
+    margin-top: 70px;
+}
+
+.module__page-form .jsShow.custom::after
+{
+    width: 100%;
+
+    -webkit-transition: all 1s ease-in-out;
+       -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+         -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+}
+
+.module__page-form .jsText.custom .module__page-form__str
+{
+    -webkit-animation: .3s textFade .3s ease-out;
+       -moz-animation: .3s textFade .3s ease-out;
+        -ms-animation: .3s textFade .3s ease-out;
+         -o-animation: .3s textFade .3s ease-out;
+            animation: .3s textFade .3s ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-form .jsText.custom p
+{
+    -webkit-animation: .3s textFade .5s ease-out;
+       -moz-animation: .3s textFade .5s ease-out;
+        -ms-animation: .3s textFade .5s ease-out;
+         -o-animation: .3s textFade .5s ease-out;
+            animation: .3s textFade .5s ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-form .jsText.custom .module__page-form__str-2,
+.module__page-form .jsText.custom .module__page-form__str-3
+{
+    -webkit-animation: .3s textFade3 .1s ease-out;
+       -moz-animation: .3s textFade3 .1s ease-out;
+        -ms-animation: .3s textFade3 .1s ease-out;
+         -o-animation: .3s textFade3 .1s ease-out;
+            animation: .3s textFade3 .1s ease-out;
+
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+         -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.module__page-form .jsText.custom .module__page-form__str-3:after
+{
+    width: 30px;
+
+    -webkit-transition: all 1s;
+       -moz-transition: all 1s;
+        -ms-transition: all 1s;
+         -o-transition: all 1s;
+            transition: all 1s;
+}
+
 .module__page-img
 {
-    padding: 0 0 150px 0;
+    padding: 0 0 0 0;
 
     background: #f2f2f2;
 }
@@ -3118,7 +3820,7 @@ h1
 
     width: 970px;
     margin: 0 auto 0 auto;
-    padding: 55px 0 115px 0;
+    padding: 55px 0 0 0;
 
     -webkit-box-lines: multiple;
        -moz-box-lines: multiple;
@@ -3143,18 +3845,20 @@ h1
 .module__page-img .aligncenter
 {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .module__page-img .alignleft
 {
     width: calc(50% - 15px);
+    height: 100%;
     margin-right: 30px;
 }
 
 .module__page-img .alignright
 {
     width: calc(50% - 15px);
+    height: 100%;
 }
 
 .module__page-nav
@@ -3391,6 +4095,8 @@ h1
 .module__page-soc
 {
     padding: 130px 0;
+
+    background: #fff;
 }
 
 .module__page-soc .icon
@@ -3489,6 +4195,40 @@ h1
 .module__page-soc__icon:last-child
 {
     margin: 0;
+}
+
+.module__page-vid
+{
+    padding: 0 0 30px 0;
+
+    background: #f2f2f2;
+}
+
+.module__page-vid .iframe-rapper
+{
+    position: relative;
+
+    height: 0;
+    padding-top: 25px;
+    padding-bottom: 56.25%;
+}
+
+.module__page-vid .iframe-rapper iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.module__page-vid iframe
+{
+    display: block;
+    overflow: hidden;
+
+    margin: 0 0 30px 0;
 }
 
 .module__preloader #preloader
@@ -4468,13 +5208,15 @@ h1
 {
     font-family: 'GiorgioSans-Bold-Web';
     font-size: 150px;
+    line-height: 144px;
 
     position: absolute;
-    top: -25px;
+    top: 30px;
 
     display: block;
 
     width: 100%;
+    height: 144px;
     padding-left: 36px;
 
     text-align: center;
@@ -4658,6 +5400,7 @@ h1
 
     height: 100%;
 
+    background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
        -moz-background-size: cover;
@@ -4668,7 +5411,7 @@ h1
 {
     line-height: 70px;
 
-    width: 660px;
+    max-width: 660px;
 
     opacity: 0;
 
@@ -5786,6 +6529,67 @@ h1
     }
 }
 
+@media screen and (max-width: 973px)
+{
+    .module__page-img__items
+    {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .module__page-form__wrap,
+    .module__page-contacts__wrap
+    {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .module__page-contacts__wrap
+    {
+        margin-bottom: 0;
+
+        -webkit-box-lines: multiple;
+           -moz-box-lines: multiple;
+             -o-box-lines: multiple;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+
+    .module__page-contacts__wrap .col__50
+    {
+        width: 100%;
+    }
+
+    .module__page-contacts__wrap .module__socials__row,
+    .module__page-contacts__wrap .module__socials
+    {
+        width: 100%;
+    }
+
+    .module__page-form__wrap
+    {
+        top: auto;
+    }
+
+    .module__page-contacts
+    {
+        padding: 70px 0 0 0;
+    }
+
+    .module__page-form
+    {
+        padding: 70px 0;
+
+        background: #fff;
+    }
+
+    .module__page-form__str
+    {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 900px)
 {
     .module__insta__str,
@@ -5824,6 +6628,57 @@ h1
     {
         width: 100%;
         padding: 0;
+    }
+
+    .module__page-nav__link,
+    .module__page-nav
+    {
+        height: 100px;
+    }
+
+    .module__page-nav
+    {
+        padding: 0 20px;
+    }
+
+    .module__page-slider__nav
+    {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .module__page-slider .icon
+    {
+        width: 14px;
+    }
+}
+
+@media screen and (max-width: 770px)
+{
+    .module__share__link
+    {
+        width: 100px;
+        height: 100px;
+        margin: 20px !important;
+    }
+
+    .module__share__icons
+    {
+        -ms-flex-line-pack: center;
+        -webkit-align-content: center;
+                align-content: center;
+        -webkit-box-align: center;
+           -moz-box-align: center;
+             -o-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-box-pack: center;
+           -moz-box-pack: center;
+             -o-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+                justify-content: center;
     }
 }
 
@@ -5893,7 +6748,9 @@ h1
         padding: 75px 0 25px 0;
     }
 
-    .module__work
+    .module__work,
+    .module__page-content,
+    .module__page-contacts
     {
         padding: 75px 0 70px 0;
     }
@@ -5924,10 +6781,96 @@ h1
     {
         height: 80px;
     }
+
+    .module__page-soc
+    {
+        padding: 40px 0;
+    }
+
+    .module__page-flickr
+    {
+        padding: 10px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    .btn-send
+    {
+        width: auto;
+    }
+
+    .module__page-contacts__str-2,
+    .module__page-contacts__link
+    {
+        font-size: 17px;
+    }
+
+    .module__share__link
+    {
+        width: 60px;
+        height: 60px;
+        margin: 10px !important;
+    }
+
+    .module__page-form__form > .row
+    {
+        -webkit-box-lines: multiple;
+           -moz-box-lines: multiple;
+             -o-box-lines: multiple;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+
+    .module__page-form__form .col__50
+    {
+        width: 100%;
+        margin: 0;
+    }
+
+    .module__page-form .form__label
+    {
+        margin-bottom: 20px;
+    }
+
+    .module__page-form__form
+    {
+        margin-top: 25px;
+    }
+
+    .module__socials__icon
+    {
+        margin: 0 5px 5px 0;
+    }
+
+    .module__socials__row
+    {
+        margin: 0 0 30px 0;
+
+        -webkit-box-align: center;
+           -moz-box-align: center;
+             -o-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+                align-items: center;
+    }
 }
 
 @media screen and (max-width: 414px)
 {
+    .module__page-soc .module__page-soc__icon
+    {
+        width: 44px;
+        height: 44px;
+    }
+
+    .module__page-soc .icon
+    {
+        width: 15px;
+        height: 15px;
+    }
+
     .footer__col,
     .module__subscribe__form,
     .module__share__icons,

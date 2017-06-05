@@ -4,6 +4,7 @@ include ../module__page-img/module__page-img
 include ../module__page-soc/module__page-soc
 include ../module__page-nav/module__page-nav
 include ../module__page-vid/module__page-vid
+include ../module__page-flickr/module__page-flickr
 include ../module__page-content/module__page-content
 
 mixin page__single(data)
@@ -21,6 +22,8 @@ mixin page__single(data)
 
   else 
     +module__page-vid()
+
+  +module__page-flickr()
 
   +module__page-soc()
 

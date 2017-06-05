@@ -354,36 +354,36 @@ $(function() {
             // .addTo(controller);
 
             // Top slider heading
-            var scene0 = new ScrollMagic.Scene({
-                triggerElement: ".module__work"
-            })
-            .setTween(".module__scroll-down", 0.5, {
-                bottom: -100
-            }) // trigger a TweenMax.to tween
-            .addTo(controller);
-            var scene1 = new ScrollMagic.Scene({
-                triggerElement: ".module__scroll-down"
-            })
-            .setTween(".module__top-slider__title", 0.5, {
-                top: 300
-            }) // trigger a TweenMax.to tween
-            .addTo(controller);
+            // var scene0 = new ScrollMagic.Scene({
+            //     triggerElement: ".module__work"
+            // })
+            // .setTween(".module__scroll-down", 0.5, {
+            //     bottom: -100
+            // }) // trigger a TweenMax.to tween
+            // .addTo(controller);
+            // var scene1 = new ScrollMagic.Scene({
+            //     triggerElement: ".module__scroll-down"
+            // })
+            // .setTween(".module__top-slider__title", 0.5, {
+            //     top: 300
+            // }) // trigger a TweenMax.to tween
+            // .addTo(controller);
 
             // Text animation
             var scene2 = new ScrollMagic.Scene({
-                triggerElement: ".f__col:nth-child(4)"
+                triggerElement: ".module__work .module__text__str"
             })
             .setTween(".module__work .module__text__str", 0.5, {
-                top: 100
+                top: -50
             }) // trigger a TweenMax.to tween
             .addTo(controller);
 
             // Text animation
             var scene4 = new ScrollMagic.Scene({
-                triggerElement: ".module__page-content"
+                triggerElement: ".module__page-content .module__text__str"
             })
             .setTween(".module__page-content .module__text__str", 0.5, {
-                top: -25
+                top: -50
             }) // trigger a TweenMax.to tween
             .addTo(controller);
 
@@ -395,20 +395,23 @@ $(function() {
                 top: -30
             }) // trigger a TweenMax.to tween
             .addTo(controller);
+            
+
+            $(window).paroller();
+        
         }
     }
 
     // Height detect
     $(window).on('load', function() {
         topHeight();
-        destroy();
+        //destroy();
         initParallax();
     });
     $(window).on('resize', function() {
         topHeight();
-        destroy();
+        //destroy();
     });
-
 
     // Destroy function
     function destroy() {
@@ -422,19 +425,67 @@ $(function() {
         }
     }
 
+    // Paralax
+  // var wHeight = $(window).height();
+  
+  // function parallax() {
+  //   var pHeight = $(this).outerHeight();
+  //   var pMiddle = pHeight / 2;
+  //   var wMiddle = wHeight / 2;
+  //   var fromTop = $(this).offset().top;
+  //   var scrolled = $(window).scrollTop();
+  //   var speed = $(this).attr('data-parallax-speed');
+  //   var rangeA = (fromTop - wHeight);
+  //   var rangeB = (fromTop + pHeight);
+  //   var rangeC = (fromTop - wHeight);
+  //   var rangeD = (pMiddle + fromTop) - (wMiddle + (wMiddle / 2));
+    
+  //   if (rangeA < 0) {
+  //     rangeA = 0;
+  //     rangeB = wHeight
+  //   }
 
-    // Custom scroll init function
-    function initScroll() {
-        var bodyScroll = $('html');
-        bodyScroll.niceScroll({
-            cursorcolor: "#fbae11",
-            cursorwidth: "10px",
-            cursorborder: "0px solid #fff", 
-            cursorborderradius: "0px", 
-            mousescrollstep: 40,
-            scrollspeed: 80
-        });
-    };
+  //   var percent = (scrolled - rangeA) / (rangeB - rangeA);
+  //   percent = percent * 200;
+  //   percent = percent * speed;
+  //   percent = percent.toFixed(2);
+    
+  //   var animFromBottom = (scrolled - rangeC) / (rangeD - rangeC);
+  //   animFromBottom = animFromBottom.toFixed(2);
+    
+  //   if (animFromBottom >= 1) {
+  //     animFromBottom = 1;
+  //   }
+
+  //   $(this).css('background-position', 'center ' + -percent + '%');
+  //   $(this).find('.parallax-content').css('opacity', animFromBottom);
+  //   $(this).find('.parallax-content').css('transform', 'scale(' + animFromBottom + ')');
+  // }
+  // $('.module__top-content').each(parallax);
+  // $(window).scroll(function(e) {
+  //   $('.module__top-content').each(parallax);
+  // });
+
+  // // Custom scroll init function
+  //   function initScroll() {
+  //       var bodyScroll = $('html');
+  //       bodyScroll.niceScroll({
+  //           cursorcolor: "#fbae11",
+  //           cursorwidth: "10px",
+  //           cursorborder: "0px solid #fff", 
+  //           cursorborderradius: "0px",
+  //           horizrailenabled: false,
+  //           autohidemode: true,
+  //           oneaxismousemode:false,
+  //           cursoropacitymax:0.7
+  //       });
+  //       bodyScroll.onscrollstart = function(){
+  //           $("iframe").fadeOut(100)
+  //       };
+  //   };
+
+  //   initScroll()
+
 
 })();
 
@@ -505,48 +556,18 @@ $(function() {
         //header.toggleClass('trDown');
         
         // Disabled scroll
-        if(!scrollers[0].element.hasClass('mCS_disabled')){
-            scrollers[0].element.mCustomScrollbar('disable', true)
-        } else {
-            setTimeout(function(){
-                scrollers[0].element.mCustomScrollbar('update')
-            }, 400)
-        }
+        // if(!scrollers[0].element.hasClass('mCS_disabled')){
+        //     scrollers[0].element.mCustomScrollbar('disable', true)
+        // } else {
+        //     setTimeout(function(){
+        //         scrollers[0].element.mCustomScrollbar('update')
+        //     }, 400)
+        // }
 
 
     });
 
 
-    // Scroll init
-    var scrollers = [
-        {
-            element: $('body'),
-            params:{
-                autoHideScrollbar: true
-            },
-            options:{
-                type:'width',
-                value: 1024
-            }
-        }
-    ]
-
-
-    // $(window).on("load resize",function(){
-    //     $('body').css('height', $(window).height());
-    //     // scrollers[0].element.mCustomScrollbar(
-    //     //     scrollers[0].params
-    //     // ); 
-    // });
-
-    // var scroll = $('.jsScroll'),
-    //     jsHeight = $(window).height();
-
-    // scroll.click(function(event) {
-    //     scrollers[0].element.mCustomScrollbar(
-    //         "scrollTo", $('.module__work')
-    //     ); 
-    // });
    
 
 })();

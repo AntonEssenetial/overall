@@ -1,2 +1,15 @@
+include ../module__top/module__top
+include ../module__page-form/module__page-form
+include ../module__page-contacts/module__page-contacts
+
+
 mixin page__contact(data)
-    
+
+  +module__top({
+    topSlider: false,
+    contacts: true
+  })
+
+  +module__page-contacts()
+
+  +module__page-form()

@@ -1,5 +1,11 @@
 mixin module__top-content(data)
   - var bemClass = 'module__top-content'
-  .module__top-content&attributes(attributes)(style='background-image: url("assets/images/slider/2.jpg")')
+  .module__top-content&attributes(attributes)(data-paroller-factor="0.3" style='background-image: url("assets/images/slider/2.jpg")')
     .module__top-slider__title
       h1.fadeIn Hermès #HermesDwntwnMen
+
+mixin module__top-content-2(data)
+  - var bemClass = 'module__top-content'
+  .module__top-content&attributes(attributes)(data-paroller-factor="0.3" style='background-image: url("assets/images/background/bg8.jpg")')
+    .module__top-slider__title
+      h1.fadeIn Contacts

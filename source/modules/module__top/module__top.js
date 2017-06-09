@@ -63,18 +63,27 @@
 
             // Text animation
             var scene2 = new ScrollMagic.Scene({
-                triggerElement: ".module__work .module__text__str"
+                triggerElement: ".module__work .module__text__str, .module__location .module__text__str, .module__about .module__text__str" 
             })
-            .setTween(".module__work .module__text__str", 0.5, {
+            .setTween(".module__work .module__text__str, .module__location .module__text__str, .module__about .module__text__str", 0.5, {
                 top: -50
             }) // trigger a TweenMax.to tween
             .addTo(controller);
 
             // Text animation
             var scene4 = new ScrollMagic.Scene({
-                triggerElement: ".module__page-content .module__text__str"
+                triggerElement: ".module__page-content .module__text__str, .module__about-team .module__text__str"
             })
-            .setTween(".module__page-content .module__text__str", 0.5, {
+            .setTween(".module__page-content .module__text__str, .module__about-team .module__text__str", 0.5, {
+                top: -50
+            }) // trigger a TweenMax.to tween
+            .addTo(controller);
+
+            // Text animation
+            var scene5 = new ScrollMagic.Scene({
+                triggerElement: ".module__about-clients .module__text__str"
+            })
+            .setTween(".module__about-clients .module__text__str", 0.5, {
                 top: -50
             }) // trigger a TweenMax.to tween
             .addTo(controller);

@@ -23,7 +23,7 @@
     transition all ease-in-out .5s
     
   &__link:hover &__arrow::after
-    width 26px 
+    width 31px 
     transition all ease-in-out .5s
     
   .icon 
@@ -31,6 +31,7 @@
     height @width
     color $dark
     margin auto 0
+    transition all ease-in-out .5s
     
   &__name 
     bold()
@@ -73,3 +74,47 @@
   &__next 
     .icon 
       margin-left auto
+      
+  &__link:hover &__next 
+    .icon
+      transform translateX(4px)
+      transition all ease-in-out .5s
+    
+  &__link:hover &__prev 
+    .icon
+      transform translateX(-4px)
+      transition all ease-in-out .5s
+      
+  &__cube 
+    display flex 
+  
+  &__items
+    margin auto 
+    display flex
+    width 30px
+    height @width
+    flex-wrap wrap
+    
+    span 
+      width 10px 
+      height @width 
+      background-color black
+      border 1px solid white
+      transition all ease-in-out .3s
+      
+  &__items:hover span:first-child
+    transition all ease-in-out .3s
+    transform: translate3D(-7px, -7px, 0px);
+    
+  &__items:hover span:nth-child(3)
+    transition all ease-in-out .3s
+    transform: translate3D(7px, -7px, 0px);
+    
+  &__items:hover span:nth-child(7)
+    transition all ease-in-out .3s
+    transform: translate3D(-7px, 7px, 0px);
+    
+  &__items:hover span:nth-child(9)
+    transition all ease-in-out .3s
+    transform: translate3D(7px, 7px, 0px);
+      

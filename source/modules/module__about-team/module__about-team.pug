@@ -1,0 +1,17 @@
+mixin module__about-team(data)
+  - var bemClass = 'module__about-team'
+  section.module__about-team&attributes(attributes)
+    .container 
+      +module__text-team()
+  
+      div(class=bemClass + '__row').row.wrap.f__row
+        -for(var x=1; x < 12; x++)
+          .f__col.jsShow
+            div(class=bemClass + '__item') 
+              img(src='assets/images/team/' + x + '.jpg' class=bemClass + '__img')
+              div(class=bemClass + '__title') 
+                span(class=bemClass + '__str') Patrick Belazor
+              div(class=bemClass + '__title').module__about-team__title-2
+                span(class=bemClass + '__str') Business-analiylst
+
+

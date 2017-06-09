@@ -1,0 +1,10 @@
+include ../module__text/module__text
+
+mixin module__location(data)
+  - var bemClass = 'module__location'
+  section#work.module__location&attributes(attributes)
+    .container
+      +module__text-3()
+
+      div(class=bemClass + '__map')
+        img(src="assets/images/background/bg9.jpg", alt="maap")

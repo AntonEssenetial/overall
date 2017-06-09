@@ -6,17 +6,54 @@
 
   &__nav 
     height 110px
-    max-width 680px
+    max-width 450px
     margin 0 auto
     
   .icon
     color $dark
     height 14px
+    width @height
       
 .slick-next-1
 .slick-prev-1
+  position: relative
   height 14px
   cursor pointer
+  display flex
+  width 50px
+  transition all ease-in-out .4s
+  +after('')
+    width 0px 
+    top 6px
+    height 2px 
+    background: black
+    display: block
+    left 0px
+    position: absolute
+    transition all ease-in-out .4s
+  &:hover:after 
+    width 20px
+    transition all ease-in-out .4s
+    
+.slick-prev-1:hover 
+  transform translateX(-2px)
+  transition all ease-in-out .4s
+.slick-prev-1
+  .icon 
+    margin-left auto
+  +after()
+    right -10px
+    left auto
+    
+.slick-next-1:hover 
+  transform translateX(2px)
+  transition all ease-in-out .4s
+.slick-next-1
+  .icon 
+    margin-right auto
+  +after()
+    left -10px
+    right auto
   
 .slick-next-1
   .icon

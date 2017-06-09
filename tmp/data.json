@@ -23,17 +23,6 @@
 			}
 		]
 	},
-	"config": {
-		"projectName": "Overall",
-		"lang": "en",
-		"path": {
-			"favicons": "assets/favicons",
-			"styles": "assets/css",
-			"scripts": "assets/javascripts",
-			"images": "assets/images",
-			"fonts": "assets/fonts"
-		}
-	},
 	"breadCrumbs": {
 		"default": [
 			{
@@ -52,6 +41,17 @@
 				"title": "Page"
 			}
 		]
+	},
+	"config": {
+		"projectName": "Overall",
+		"lang": "en",
+		"path": {
+			"favicons": "assets/favicons",
+			"styles": "assets/css",
+			"scripts": "assets/javascripts",
+			"images": "assets/images",
+			"fonts": "assets/fonts"
+		}
 	},
 	"footerNav": {
 		"default": [

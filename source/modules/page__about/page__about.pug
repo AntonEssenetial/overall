@@ -1,2 +1,16 @@
+include ../module__top/module__top
+include ../module__about/module__about
+include ../module__about-team/module__about-team
+include ../module__about-clients/module__about-clients
+
 mixin page__about(data)
-    
+
+  +module__top({
+    about: true
+  })
+
+  +module__about()
+
+  +module__about-team()
+
+  +module__about-clients()

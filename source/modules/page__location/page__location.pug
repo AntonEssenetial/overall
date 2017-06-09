@@ -1,0 +1,12 @@
+include ../module__top/module__top
+include ../module__location/module__location
+
+
+mixin page__location(data)
+
+  +module__top({
+    topSlider: false,
+    contacts: true
+  })
+
+  +module__location()

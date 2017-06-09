@@ -9,7 +9,7 @@ mixin module__page-contacts(data)
         span(class=bemClass + '__str-2').jsShow 874 Kent Ave./ Ground Floor Brooklyn, NY 11205
         span(class=bemClass + '__str-2').jsShow P. 718.783.0835
   
-        div(class=bemClass + '__soc') 
+        div(class=bemClass + '__soc').jsShow
           span(class=bemClass + '__str').jsShow Follow us
           +module__socials().jsShow
       .col__50
@@ -17,5 +17,5 @@ mixin module__page-contacts(data)
         a(href='#' class=bemClass + '__link').jsShow info@overallmurals.com
         span(class=bemClass + '__str').jsShow SALES INQUIRIES
         a(href='#' class=bemClass + '__link').jsShow info@overallmurals.com
-        span(class=bemClass + '__str') JOB OPPORTUNITIES
+        span(class=bemClass + '__str').jsShow JOB OPPORTUNITIES
         a(href='#' class=bemClass + '__link').jsShow info@overallmurals.com

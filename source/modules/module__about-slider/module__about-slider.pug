@@ -1,0 +1,31 @@
+mixin module__about-slider(data)
+  - var bemClass = 'module__about-slider'
+  .module__about-slider&attributes(attributes)
+    .jsSlickAbout
+      div(class=bemClass + '__slide' data-slide='slide 1')
+        .row
+          .col__50
+            +module__text-5()
+          .col__50
+            img(src="assets/images/slider/4.png", alt="")
+      div(class=bemClass + '__slide' data-slide='slide 2')
+        .row
+          .col__50
+            +module__text-5()
+          .col__50
+            img(src="assets/images/slider/4.png", alt="")
+      div(class=bemClass + '__slide' data-slide='slide 3')
+        .row
+          .col__50
+            +module__text-5()
+          .col__50
+            img(src="assets/images/slider/4.png", alt="")
+    div(class=bemClass + '__nav').row.center.between 
+      .slide-count-wrap.row.center
+        .current
+        .separator
+        .total
+      .slick-prev-1
+        +icon('left')
+      .slick-next-1
+        +icon('right')

@@ -9,8 +9,11 @@ mixin module__top(data)
     if data.topSlider
       +module__top-slider()
 
+    else if data.about
+      +module__top-content-3()
+
     else if data.contacts
-      +module__top-content-2()
+      +module__top-content-2().module__top-content_contacts
     
     else
       +module__top-content()

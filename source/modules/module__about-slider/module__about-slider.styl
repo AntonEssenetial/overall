@@ -1,0 +1,178 @@
+.module__about-slider
+  margin-top 130px
+  background: #191919
+  
+  &__nav 
+    width 245px
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 160px);
+  
+  .col__50 
+    padding 110px 100px
+    
+  .col__50:first-child
+    background: #1d1d1d
+    
+  .col__50:last-child
+    background: #191919
+    
+  .module__text__col
+    width 100%
+    
+  img 
+    width 100%
+    margin 0 auto
+    display: block
+    
+  p 
+    padding-bottom 34px
+    
+  .slick-dots
+    position: absolute
+    right 0px
+    top 38%
+    z-index 1
+    
+    li 
+      display flex 
+      align-items: center;
+      flex-direction: row-reverse;
+      
+      &:nth-child(1)
+        .slick-button 
+          animation .5s leftToRight 1s ease-out
+          animation-fill-mode: forwards;
+      &:nth-child(2)
+        .slick-button 
+          animation .5s leftToRight 1.3s ease-out
+          animation-fill-mode: forwards;
+      &:nth-child(3)
+        .slick-button 
+          animation .5s leftToRight 1.6s ease-out
+          animation-fill-mode: forwards;
+      &:nth-child(4)
+        .slick-button 
+          animation .5s rightToLeft 1.8s ease-out
+          animation-fill-mode: forwards;
+      &:nth-child(5)
+        .slick-button 
+          animation .5s rightToLeft 2s ease-out
+          animation-fill-mode: forwards;
+          
+    .slick-wrapper 
+      overflow hidden
+      
+    .slick-title 
+      color $yellow
+      font-size 16px
+      g-bold()
+      text-transform: uppercase
+      letter-spacing 5px
+      transform translateX(-5px)
+      trs-slow()
+      opacity 0  
+      position: relative 
+      top -3px    
+    
+    .slick-button
+      transform translateX(-30px)
+      background: white
+      width 30px 
+      height 10px
+      margin 15px 0
+      position: relative
+      color transparent
+      overflow: hidden
+      cursor pointer
+      +after('')
+        background-color: $yellow;
+        position absolute 
+        width 100% 
+        height 110% 
+        left 0px 
+        top 0px
+        margin-left -30px
+        trs()
+      &:hover
+        +after('')
+          background-color: $yellow
+          trs()
+          margin-left 0px
+          
+    .slick-wrapper:hover + .slick-title
+      opacity 1
+      transform translateX(-20px)
+      
+  .slick-next-1, 
+  .slick-prev-1
+    width 85px 
+    height @width
+    
+  .slick-next-1
+    background: #2b2b2b
+  .slick-prev-1
+    background: #292929
+    
+  .icon 
+    color white
+    width 14px 
+    height @width
+    margin auto
+    transition all ease-in-out .3s
+    
+  .slick-next-1:hover .icon 
+    transform translateX(2px)
+    transition all ease-in-out .3s
+  .slick-prev-1:hover .icon 
+    transform translateX(-2px)
+    transition all ease-in-out .3s
+    
+  .slick-next-1:hover
+  .slick-prev-1:hover
+    transform translateX(0px)
+    
+  .slick-next-1 .icon
+    transform: rotateZ(0deg);
+    
+  .slick-next-1::after
+    left 27px
+    top 42px
+    background: white
+    
+  .slick-prev-1::after
+    background: white 
+    top 42px 
+    right 27px
+    
+  .current 
+  .total 
+    color white
+    
+  .slide-count-wrap
+    width 74px
+    
+  p, ul, ol 
+    opacity 0
+    
+    
+  .slick-active
+    .module__text__col
+      .module__text__str-3:after 
+        width 30px 
+        transition .8s all .3s
+      p
+        animation .2s textFade .4s ease-out
+        animation-fill-mode: forwards
+      ol, ul 
+        animation .2s textFade .5s ease-out
+        animation-fill-mode: forwards
+      .module__text__str-3
+        animation .2s textFade .3s ease-out
+        animation-fill-mode: forwards
+      .module__text__str-2
+        animation .2s textFade .2s ease-out
+        animation-fill-mode: forwards
+  
+  
+    

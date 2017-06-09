@@ -1,0 +1,10 @@
+include ../module__text/module__text
+include ../module__about-slider/module__about-slider
+
+mixin module__about(data)
+  - var bemClass = 'module__about'
+  section#work.module__about&attributes(attributes)
+    .container
+      +module__text-4()
+
+      +module__about-slider().jsShow

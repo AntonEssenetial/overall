@@ -1,0 +1,88 @@
+.module__about-team
+  background: #f2f2f2
+  padding 130px 0 0 0
+  
+  .module__text_content 
+  .module__text__str
+    color: #eaeaea;
+    
+  .module__text p
+  .module__text__str-3
+    color $dark
+    
+  &__img 
+    width 100%
+    height auto 
+    display: block
+    
+  .f__col
+    flex 1
+    flex-basis: 270px;
+    opacity 0
+    
+  &__row 
+    flex-wrap wrap
+    margin-top 110px
+    
+  &__item 
+    position: relative;
+    margin-bottom: 30px;
+    +after('')
+      background: $yellow
+      top 0px
+      left 0px 
+      width 0%
+      height 100%
+      position: absolute
+      opacity: 0
+      z-index: 0
+    &:hover 
+      +after()
+        trs()
+        opacity 1
+        width 100%
+        mix-blend-mode: multiply;
+    
+  &__title &__str 
+    transition .3s width .1s
+  
+  &__title-2 &__str 
+    transition .3s width .3s
+    
+  &__item:hover &__title &__str 
+    width 100%
+    transition .3s width .1s
+    
+  &__item:hover &__title-2 &__str
+    transition .3s width .3s
+    
+  &__str 
+    font-size 16px
+    text-transform: uppercase
+    g-bold()
+    color black
+    letter-spacing 4px
+    overflow: hidden
+    width 0px
+    transition width 2s
+    white-space nowrap
+    padding 10px 0px 10px 0
+    background-color: rgb(246, 246, 246)
+    display: block
+    +before('')
+      width 30px 
+      display: inline-block
+    +after('')
+      width 30px 
+      display: inline-block
+    
+  &__title 
+    left 0px
+    bottom 66px
+    position: absolute
+    height 36px
+    z-index 1
+    
+  &__title-2
+    bottom 30px
+    

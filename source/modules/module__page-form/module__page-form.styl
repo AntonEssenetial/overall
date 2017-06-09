@@ -39,7 +39,7 @@
       height 0% 
       position: absolute 
       left 0px 
-      top 0px
+      bottom 0px
       background: $dark
       transition all .3s ease-in-out
       z-index: -1
@@ -108,6 +108,9 @@
       
   &__form 
     margin-top 70px
+    
+  .row.label_focus::after
+    display: none
 
   .jsShow.custom::after 
       width 100%
